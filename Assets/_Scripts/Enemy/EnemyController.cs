@@ -8,24 +8,23 @@ public class EnemyController : MonoBehaviour {
 
     private Transform navTarget;               // Reference to the player's position.
     private NavMeshAgent navAgent;               // Reference to the nav mesh agent.
-    private Animator animator;
-    private EnemyHealth enemyHealth;
-    
+    private Animator animator; 
     public EnemyState enemyState;
     [HideInInspector]public Vector3 startingPosition;
     private float timer;
     public float cooldown = 1;
-
-
+    public int healthPoints;
+    private CapsuleCollider capCollider;
     void Awake()
     {
         // Set up the references.
-        enemyHealth = GetComponent<EnemyHealth>();
         navAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        capCollider = GetComponent<CapsuleCollider>();
     }
     private void Start()
     {
+        healthPoints = 100;
         navAgent.enabled = true;
         navTarget = transform;
         startingPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
@@ -52,10 +51,10 @@ public class EnemyController : MonoBehaviour {
                 transform.rotation = rotation;        
                 if (navAgent.remainingDistance <= navAgent.stoppingDistance)
                 {
-                    
+                    navAgent.isStopped = true;
                     if (timer >= cooldown)
-                    {
-                        StartCoroutine(HitPlayControl());
+                    {                       
+                        animator.SetTrigger("Attack");
                         timer = 0;
                     }
                 }
@@ -67,6 +66,7 @@ public class EnemyController : MonoBehaviour {
                 break;
             case EnemyState.Dead:
                 navAgent.isStopped = true;
+                transform.Translate(-Vector3.up * 0.2f * Time.deltaTime);
                 break;     
         }      
     }
@@ -74,15 +74,36 @@ public class EnemyController : MonoBehaviour {
     {
         navTarget = newTarget;
     }
-
-    IEnumerator HitPlayControl()
+    public void TakeDamage(int amount)
     {
-
-        navAgent.isStopped = true;
-        animator.SetBool("IsMoving", false);
-        animator.SetTrigger("Attack");
-        yield return new WaitForSecondsRealtime(0.2f);
+        healthPoints -= amount;
+        
+        // If the enemy is dead...
+        if (healthPoints <= 0)
+        {
+            animator.SetTrigger("Die");
+            enemyState = EnemyState.Dead;
+            capCollider.isTrigger = true;
+            StartCoroutine(Death());
+            return;
+        }
+        // Play the hurt sound effect.
+        //enemyAudio.Play();
+       animator.SetTrigger("Damage");
+        //StartCoroutine(Hit());
+    }
+    IEnumerator Hit()
+    {
         navAgent.isStopped = false;
+        navAgent.destination = transform.position;
+        yield return new WaitForSecondsRealtime(0.2f);
+    }
+    IEnumerator Death()
+    {
+        animator.SetTrigger("Die");
+        navAgent.destination = transform.position;
+        yield return new WaitForSecondsRealtime(2f);
+        Destroy(gameObject);
     }
 
 }

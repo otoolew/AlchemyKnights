@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        distance = navAgent.remainingDistance - navAgent.stoppingDistance;
+        //distance = navAgent.remainingDistance - navAgent.stoppingDistance;
         if (navAgent.remainingDistance <= navAgent.stoppingDistance)
         {
             if (!navAgent.hasPath || Mathf.Abs(navAgent.velocity.sqrMagnitude) < float.Epsilon)
