@@ -225,6 +225,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="AlchemyKnights.Plugins.csproj">
+      <Project>{1020231A-AEA0-EA29-C360-73BB20229D5F}</Project>
+      <Name>AlchemyKnights.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\_Scripts\Ability\Ability.cs" />
     <Compile Include="Assets\_Scripts\Ability\MeleeAbility.cs" />
     <Compile Include="Assets\_Scripts\Ability\MeleeTrigger.cs" />
