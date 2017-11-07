@@ -29,11 +29,14 @@ public class PlayerController : MonoBehaviour
     {
         navAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        navAgent.SetDestination(transform.position);
         HP = 100;
     }
 
     private void Update()
     {
+        if (!navAgent.isActiveAndEnabled)
+            return;
         if (navAgent.stoppingDistance > navAgent.remainingDistance)
         {
             animator.SetBool("IsMoving", false);

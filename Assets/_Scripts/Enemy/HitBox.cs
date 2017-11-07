@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HitBox : MonoBehaviour {
+    public int hitDamage = 25;
     public List<string> collisionTags;
     private void OnTriggerEnter(Collider otherCollider)
     {
@@ -10,7 +11,10 @@ public class HitBox : MonoBehaviour {
         {
             if (otherCollider.gameObject.tag == collisionTags[i])
             {
-                Debug.Log("Player Hit!");
+                if(otherCollider.gameObject.tag == "Player")
+                {
+                    otherCollider.gameObject.GetComponent<PlayerHealth>().TakeDamage(hitDamage);
+                }
             }
         }     
     }

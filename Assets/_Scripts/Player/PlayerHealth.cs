@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.AI;
+
 
 public class PlayerHealth : MonoBehaviour {
     //public GameObject deathPanelUI;
@@ -63,6 +65,11 @@ public class PlayerHealth : MonoBehaviour {
         healthSlider.value = currentHealth;
 
         //DEBUG Status Effects
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            Debug.Log("Damaged Me!");
+            TakeDamage(10);
+        }
         if (Input.GetKeyDown(KeyCode.B))
         {
             Debug.Log("Blind");
@@ -116,23 +123,22 @@ public class PlayerHealth : MonoBehaviour {
         {
             case 0:
                 Debug.Log("Took Red Potion");
-                //toxicManager.UpdateSlider(slot);
+                toxicManager.UpdateSlider(slot);
                 HealDamage(50);
                 break;
             case 1:
                 Debug.Log("Took Blue Potion");
-                //toxicManager.UpdateSlider(slot);
+                toxicManager.UpdateSlider(slot);
                 CureBlind();
                 break;
             case 2:
                 Debug.Log("Took Green Potion");
-                CurePoison();
-                //toxicManager.UpdateSlider(slot);
+                toxicManager.UpdateSlider(slot);
+                CurePoison();                
                 break;
             case 3:
-                Debug.Log("Took Yellow Potion");
-                DisableDizzy();
-                //toxicManager.UpdateSlider(slot);
+                Debug.Log("Took Yellow Potion");            
+                toxicManager.UpdateSlider(slot);
                 DisableDizzy();
                 break;
             default:
@@ -234,11 +240,11 @@ public class PlayerHealth : MonoBehaviour {
         // Red Toxic Check
         if (toxicManager.toxicSliders[0].value > 50)
         {
-            GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 3;
+            GetComponent<NavMeshAgent>().speed = 3;
         }
         else
         {
-            GetComponent<UnityEngine.AI.NavMeshAgent>().speed = 5;
+            GetComponent<NavMeshAgent>().speed = 5;
         }
         // Blue Toxic Check
         if (toxicManager.toxicSliders[1].value > 95)
@@ -259,46 +265,34 @@ public class PlayerHealth : MonoBehaviour {
             if (!poisoned)
                 ApplyPoison();
         }
-
     }
-
-
     public void Death()
     {
         isDead = true;
         animator.SetTrigger("Die");
-
         StartSinking();
         // The enemy is dead.
-
-
-
         // Tell the animator that the enemy is dead.
         animator.SetTrigger("Die");
-
         // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
         //enemyAudio.clip = deathClip;
         //enemyAudio.Play();
         OnDeath.Invoke();
     }
-
     public void StartSinking()
     {
         // Find and disable the Nav Mesh Agent.
-        GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
-
+        // GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
         // Find the rigidbody component and make it kinematic (since we use Translate to sink the enemy).
         GetComponent<Rigidbody>().isKinematic = true;
-
         // The enemy should no sink.
         isSinking = true;
         // Increase the score by the enemy's score value.
         StartCoroutine(DisableObject());
-
     }
     IEnumerator DisableObject()
     {
         yield return new WaitForSeconds(2f);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }
