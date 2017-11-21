@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour {
     private bool isDead;
     private bool damaged;
     private bool isSinking;
-    private bool poisoned;
+    public bool poisoned;
     private bool blind;
     private bool healing;
     public ToxicManager toxicManager;
@@ -32,12 +32,19 @@ public class PlayerHealth : MonoBehaviour {
     private float coolDownTimeLeft;
     //AudioSource enemyAudio;                                   // Reference to the audio source.
     //ParticleSystem hitParticles;                              // Reference to the particle system that plays when the enemy is damaged.
-    public ParticleSystem poisonParticles;
+    public GameObject poisonParticles;
     //public ParticleSystem healingParticles;
 
-    //public DiscoLights dizzy;
+    public DiscoLights dizzy;
     private float poisonTimer;
     private float tickTimer;
+
+    public UnityEvent OnPoison;
+    public UnityEvent OnCurePoison;
+    public UnityEvent OnDizzy;
+    public UnityEvent OnCureDizzy;
+    public UnityEvent OnSlow;
+    public UnityEvent OnCureSlow;
     public UnityEvent OnDeath;
 
     void Awake()
@@ -84,9 +91,13 @@ public class PlayerHealth : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log("Poison");
-            ApplyPoison();
+            OnPoison.Invoke();
         }
-
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Debug.Log("Dizzy");
+            OnDizzy.Invoke();
+        }
         // END DEBUG Status Effects
         if (poisoned && poisonTimer < 5f)
             Poison();
@@ -138,12 +149,12 @@ public class PlayerHealth : MonoBehaviour {
             case 2:
                 Debug.Log("Took Green Potion");
                 toxicManager.UpdateSlider(slot);
-                CurePoison();                
+                OnCurePoison.Invoke();                
                 break;
             case 3:
                 Debug.Log("Took Yellow Potion");            
                 toxicManager.UpdateSlider(slot);
-                DisableDizzy();
+                OnCureDizzy.Invoke();
                 break;
             default:
                 break;
@@ -188,7 +199,7 @@ public class PlayerHealth : MonoBehaviour {
     public void ApplyDizzy()
     {
         TakeDamage(10);
-        //dizzy.isActive = true;
+        dizzy.isActive = true;
     }
     public void DisableDizzy()
     {
@@ -215,8 +226,6 @@ public class PlayerHealth : MonoBehaviour {
     public void CurePoison()
     {
         poisoned = false;
-        //if (poisonParticles.isPlaying)
-        //    poisonParticles.Stop();
     }
     public void HealDamage(int amount)
     {
@@ -245,6 +254,7 @@ public class PlayerHealth : MonoBehaviour {
         if (toxicManager.toxicSliders[0].value > 50)
         {
             GetComponent<NavMeshAgent>().speed = 3;
+            OnSlow.Invoke();
         }
         else
         {
@@ -255,7 +265,7 @@ public class PlayerHealth : MonoBehaviour {
         {
             //if (!dizzy.isActive)
             //    ApplyDizzy();
-            //Debug.Log("Dizzy not implemented. Apply Dizzy Here");
+            Debug.Log("Dizzy not implemented. Apply Dizzy Here");
         }
         // Green Toxic Check
         if (toxicManager.toxicSliders[2].value > 75)
