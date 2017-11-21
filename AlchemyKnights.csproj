@@ -257,6 +257,7 @@
     <Compile Include="Assets\_Scripts\LifeTime.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\_Scripts\PlayFX.cs" />
     <Compile Include="Assets\_Scripts\Testing\DressingRoom.cs" />
     <Compile Include="Assets\_Scripts\Testing\Puppet.cs" />
     <Compile Include="Assets\_Scripts\ToxicStatusEffects\BlindStatusEffect.cs" />
@@ -289,20 +290,20 @@
     <Compile Include="Assets\_Scripts\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\_Scripts\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\_Scripts\Utility\WaypointProgressTracker.cs" />
-    <Compile Include="Assets\Abilities\MagicEffects\Scripts\MagicBeamScript.cs" />
-    <Compile Include="Assets\Abilities\MagicEffects\Scripts\MagicButtonScript.cs" />
-    <Compile Include="Assets\Abilities\MagicEffects\Scripts\MagicDragMouseOrbit.cs" />
-    <Compile Include="Assets\Abilities\MagicEffects\Scripts\MagicFireProjectile.cs" />
-    <Compile Include="Assets\Abilities\MagicEffects\Scripts\MagicLightFade.cs" />
-    <Compile Include="Assets\Abilities\MagicEffects\Scripts\MagicLoadSceneOnClick.cs" />
-    <Compile Include="Assets\Abilities\MagicEffects\Scripts\MagicLoopScript.cs" />
-    <Compile Include="Assets\Abilities\MagicEffects\Scripts\MagicProjectileScript.cs" />
-    <Compile Include="Assets\Abilities\MagicEffects\Scripts\MagicRotation.cs" />
+    <Compile Include="Assets\MagicEffects\Scripts\MagicBeamScript.cs" />
+    <Compile Include="Assets\MagicEffects\Scripts\MagicButtonScript.cs" />
+    <Compile Include="Assets\MagicEffects\Scripts\MagicDragMouseOrbit.cs" />
+    <Compile Include="Assets\MagicEffects\Scripts\MagicFireProjectile.cs" />
+    <Compile Include="Assets\MagicEffects\Scripts\MagicLightFade.cs" />
+    <Compile Include="Assets\MagicEffects\Scripts\MagicLoadSceneOnClick.cs" />
+    <Compile Include="Assets\MagicEffects\Scripts\MagicLoopScript.cs" />
+    <Compile Include="Assets\MagicEffects\Scripts\MagicProjectileScript.cs" />
+    <Compile Include="Assets\MagicEffects\Scripts\MagicRotation.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Abilities\MagicEffects\MagicArsenal - ReadMe.txt" />
     <None Include="Assets\Characters\Orcs\models\textures\ColorCoded\Color Coding readme.txt" />
     <None Include="Assets\Enviroment\Info.txt" />
+    <None Include="Assets\MagicEffects\MagicArsenal - ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

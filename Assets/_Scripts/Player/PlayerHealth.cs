@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour {
     private float coolDownTimeLeft;
     //AudioSource enemyAudio;                                   // Reference to the audio source.
     //ParticleSystem hitParticles;                              // Reference to the particle system that plays when the enemy is damaged.
-    //public ParticleSystem poisonParticles;
+    public ParticleSystem poisonParticles;
     //public ParticleSystem healingParticles;
 
     //public DiscoLights dizzy;
@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         // Setting up the references.
         animator = GetComponentInParent<Animator>();
-        toxicManager = GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<ToxicManager>();
+        //toxicManager = GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<ToxicManager>();
         //enemyAudio = GetComponent<AudioSource>();
         //hitParticles = GetComponentInChildren<ParticleSystem>();
 
