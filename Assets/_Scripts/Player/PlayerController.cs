@@ -32,7 +32,19 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if (!navAgent.isActiveAndEnabled)
-            return;
+        {
+            if (navAgent.stoppingDistance > navAgent.remainingDistance)
+            {
+                animator.SetBool("Idle", true);
+                animator.SetBool("Running", false);
+            }
+            else
+            {
+                animator.SetBool("Idle", false);
+                animator.SetBool("Running", true);
+            }
+        }
+           
         if (navAgent.stoppingDistance > navAgent.remainingDistance)
         {
             animator.SetBool("Idle", true);

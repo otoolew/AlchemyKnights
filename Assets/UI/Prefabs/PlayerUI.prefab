@@ -72,7 +72,6 @@ GameObject:
   - component: {fileID: 224262502532542760}
   - component: {fileID: 222097669340639796}
   - component: {fileID: 114290150712205946}
-  - component: {fileID: 114796639598331842}
   m_Layer: 5
   m_Name: PotionPage
   m_TagString: Untagged
@@ -276,7 +275,6 @@ GameObject:
   - component: {fileID: 224388407170977396}
   - component: {fileID: 222932466880957354}
   - component: {fileID: 114635403478061768}
-  - component: {fileID: 114333165039826362}
   m_Layer: 5
   m_Name: ToxicPanel
   m_TagString: Untagged
@@ -349,7 +347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1385726781364874
 GameObject:
   m_ObjectHideFlags: 1
@@ -395,6 +393,7 @@ GameObject:
   - component: {fileID: 224978402900933156}
   - component: {fileID: 223853182157195574}
   - component: {fileID: 114989353638242862}
+  - component: {fileID: 114982343534230146}
   m_Layer: 5
   m_Name: PlayerUI
   m_TagString: PlayerStats
@@ -893,7 +892,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 89d136dc3319b414ca4293032ed6e3a6, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
@@ -1036,7 +1035,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 89d136dc3319b414ca4293032ed6e3a6, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
     m_FontStyle: 1
     m_BestFit: 0
@@ -1098,7 +1097,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 89d136dc3319b414ca4293032ed6e3a6, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
@@ -1198,7 +1197,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114796639598331842}
+      - m_Target: {fileID: 0}
         m_MethodName: NextPage
         m_Mode: 1
         m_Arguments:
@@ -1360,7 +1359,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 89d136dc3319b414ca4293032ed6e3a6, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
@@ -1481,17 +1480,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114333165039826362
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1314690077421304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114333352041977858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1557,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d58c3f648d030de47b01fa2df45dde4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIPanel: {fileID: 0}
+  UIPanel: {fileID: 1377697235165164}
 --- !u!114 &114372702486956412
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1577,7 +1565,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f9fa25987b0c15a4eb56e114a09a28bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6cc145a8ed73d05419da4dce007f3aca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1684,7 +1672,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 89d136dc3319b414ca4293032ed6e3a6, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
     m_FontStyle: 1
     m_BestFit: 0
@@ -1796,7 +1784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1980,8 +1968,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: TakePotion
-        m_Mode: 3
+        m_MethodName: CureBlind
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2191,7 +2179,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.63529414, g: 0.63529414, b: 0.63529414, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2209,8 +2197,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: TakePotion
-        m_Mode: 3
+        m_MethodName: DisableDizzy
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2275,17 +2263,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114796639598331842
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1072486667022116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114813549313394206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2358,7 +2335,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 20
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2404,7 +2381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114796639598331842}
+      - m_Target: {fileID: 0}
         m_MethodName: PreviousPage
         m_Mode: 1
         m_Arguments:
@@ -2518,7 +2495,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 89d136dc3319b414ca4293032ed6e3a6, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
     m_FontStyle: 1
     m_BestFit: 0
@@ -2582,8 +2559,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: TakePotion
-        m_Mode: 3
+        m_MethodName: CurePoison
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2594,6 +2571,24 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114982343534230146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1462557393215728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eca9c8648e303284499579365fab7f61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toxicSliders:
+  - {fileID: 114530761210057750}
+  - {fileID: 114141059859766858}
+  - {fileID: 114639339401279408}
+  - {fileID: 114172621471522090}
+  reduceAmountPerSec: 5
+  halfLife: 2
 --- !u!114 &114984434717928032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2613,7 +2608,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 572e4f8109d428541a3b881b0f4db1db, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fccf403d68c89354cbf48aa21e57fd5c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3101,7 +3096,7 @@ RectTransform:
   - {fileID: 224449537554835420}
   - {fileID: 224283553029390178}
   m_Father: {fileID: 224978402900933156}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -3297,7 +3292,7 @@ RectTransform:
   - {fileID: 224360480331531424}
   - {fileID: 224995090148147948}
   m_Father: {fileID: 224978402900933156}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3334,7 +3329,7 @@ RectTransform:
   m_Children:
   - {fileID: 224804466408518174}
   m_Father: {fileID: 224978402900933156}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3538,7 +3533,7 @@ RectTransform:
   - {fileID: 224322098538479948}
   - {fileID: 224690406658242632}
   m_Father: {fileID: 224978402900933156}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -3800,7 +3795,7 @@ RectTransform:
   - {fileID: 224547462075709304}
   - {fileID: 224262502532542760}
   m_Father: {fileID: 224978402900933156}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3838,11 +3833,11 @@ RectTransform:
   m_Children:
   - {fileID: 224336497760005748}
   - {fileID: 224112450382974674}
-  - {fileID: 224582831824623342}
   - {fileID: 224429644780593768}
   - {fileID: 224388407170977396}
   - {fileID: 224213503838047858}
   - {fileID: 224961543570426686}
+  - {fileID: 224582831824623342}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

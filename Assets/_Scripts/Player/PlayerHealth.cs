@@ -44,6 +44,7 @@ public class PlayerHealth : MonoBehaviour {
     {
         // Setting up the references.
         animator = GetComponentInParent<Animator>();
+        toxicManager = GameObject.FindGameObjectWithTag("PlayerStats").GetComponent<ToxicManager>();
         //enemyAudio = GetComponent<AudioSource>();
         //hitParticles = GetComponentInChildren<ParticleSystem>();
 
