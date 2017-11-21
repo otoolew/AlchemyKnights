@@ -1,5 +1,1 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-public enum CollisionType { TriggerVsTrigger, TriggerVsCollider, ColliderVsCollider }
-
+﻿public enum CollisionType { ColliderVsCollider, TriggerVsCollider, TriggerVsTrigger }

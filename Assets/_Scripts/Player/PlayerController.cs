@@ -12,25 +12,21 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     private Animator animator;
-    private Transform navTarget;
     private NavMeshAgent navAgent;
-    private float distance;
+    private PlayerAbility playerAbility;
     public LayerMask layerMask;
     private Ray ray;
     private RaycastHit rayHit;
-    private float rayCastRange;
-    private bool moving;
-    private bool enemyClicked;
     public Transform launchPoint;
     public LineRenderer lineRender;
-    public int HP;
-
+      
     private void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        playerAbility = GetComponent<PlayerAbility>();
+        navAgent.enabled = true;
         navAgent.SetDestination(transform.position);
-        HP = 100;
     }
 
     private void Update()
@@ -39,11 +35,13 @@ public class PlayerController : MonoBehaviour
             return;
         if (navAgent.stoppingDistance > navAgent.remainingDistance)
         {
-            animator.SetBool("IsMoving", false);
+            animator.SetBool("Idle", true);
+            animator.SetBool("Running", false);
         }
         else
         {
-            animator.SetBool("IsMoving", true);
+            animator.SetBool("Idle", false);
+            animator.SetBool("Running", true);
         }
 
         if (Input.GetMouseButton(0))
@@ -78,9 +76,23 @@ public class PlayerController : MonoBehaviour
                 var newPoint = hitPoint + vector;
 
                 launchPoint.transform.LookAt(newPoint);
-                //Debug.Log(rayHit.point);
-                animator.SetBool("IsMoving", false);
+                //Debug.Log(rayHit.point);              
             }
         }
+        // For Debug
+        if (Input.GetKey(KeyCode.A))
+            animator.SetTrigger("Attack");
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("Casting", true);
+        }
+
+    }
+    public void DeathSequence()
+    {
+        navAgent.enabled = false;
+        playerAbility.enabled = false;
+        // Trigger Damage Animation
+        animator.SetTrigger("Death");
     }
 }

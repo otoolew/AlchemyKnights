@@ -235,7 +235,10 @@
     <Compile Include="Assets\_Scripts\Ability\RayCastAbility.cs" />
     <Compile Include="Assets\_Scripts\Ability\RayCastTrigger.cs" />
     <Compile Include="Assets\_Scripts\Abstract\Health.cs" />
+    <Compile Include="Assets\_Scripts\Abstract\Item.cs" />
+    <Compile Include="Assets\_Scripts\Abstract\Potion.cs" />
     <Compile Include="Assets\_Scripts\Camera\CameraFollow.cs" />
+    <Compile Include="Assets\_Scripts\DisableTrigger.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyMelee.cs" />
@@ -250,6 +253,8 @@
     <Compile Include="Assets\_Scripts\Enums\ProjectileType.cs" />
     <Compile Include="Assets\_Scripts\Enums\StatusCondition.cs" />
     <Compile Include="Assets\_Scripts\Enums\ToxicType.cs" />
+    <Compile Include="Assets\_Scripts\HitBox3D.cs" />
+    <Compile Include="Assets\_Scripts\LifeTime.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\_Scripts\Testing\DressingRoom.cs" />
@@ -260,6 +265,7 @@
     <Compile Include="Assets\_Scripts\ToxicStatusEffects\HealOverTIme.cs" />
     <Compile Include="Assets\_Scripts\ToxicStatusEffects\TimedStatusEffect.cs" />
     <Compile Include="Assets\_Scripts\ToxicStatusEffects\ToxicManager.cs" />
+    <Compile Include="Assets\_Scripts\UI\PotionPage.cs" />
     <Compile Include="Assets\_Scripts\UI\ToggleUI.cs" />
     <Compile Include="Assets\_Scripts\Utility\ActivateTrigger.cs" />
     <Compile Include="Assets\_Scripts\Utility\AlphaButtonClickMask.cs" />

@@ -85,6 +85,7 @@ public class PlayerHealth : MonoBehaviour {
             Debug.Log("Poison");
             ApplyPoison();
         }
+
         // END DEBUG Status Effects
         if (poisoned && poisonTimer < 5f)
             Poison();
@@ -115,6 +116,8 @@ public class PlayerHealth : MonoBehaviour {
             // ... move the enemy down by the sinkSpeed per second.
             transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
         }
+        if (Input.GetKey(KeyCode.F))
+            Death();
     }
 
     public void TakePotion(int slot)
@@ -269,11 +272,11 @@ public class PlayerHealth : MonoBehaviour {
     public void Death()
     {
         isDead = true;
-        animator.SetTrigger("Die");
+        animator.SetTrigger("Death");
         StartSinking();
         // The enemy is dead.
         // Tell the animator that the enemy is dead.
-        animator.SetTrigger("Die");
+        //animator.SetTrigger("Die");
         // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
         //enemyAudio.clip = deathClip;
         //enemyAudio.Play();
