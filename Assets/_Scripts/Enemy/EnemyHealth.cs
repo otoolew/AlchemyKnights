@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyHealth : MonoBehaviour {
+    
     //public AudioClip deathClip;                 // The sound to play when the enemy dies.
     Animator animator;                              // Reference to the animator.
     //AudioSource audio;                     // Reference to the audio source.   
@@ -31,35 +32,14 @@ public class EnemyHealth : MonoBehaviour {
         currentHealth = startingHealth;
     }
 
-    void Update()
-    {
-        // Add the time since Update was last called to the timer.
-        timer += Time.deltaTime;
-
-        if (currentHealth <= 0)
-        {
-            GetComponent<NavMeshAgent>().isStopped = true;
-
-            isDead = true;
-            // ... the enemy is dead.
-            StartCoroutine(Death());
-        }
-        // If the enemy should be sinking...
-        if (sinking)
-        {
-            // ... move the enemy down by the sinkSpeed per second.
-            transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
-        }
-    }
-
-
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         // If the enemy is dead...
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
-            isDead = true;
+            GetComponent<NavMeshAgent>().isStopped = true;
+            StartCoroutine(Death());
             return;
         }
         // Play the hurt sound effect.
@@ -76,7 +56,7 @@ public class EnemyHealth : MonoBehaviour {
         capsuleCollider.isTrigger = true;
         animator.SetTrigger("Die");
         yield return new WaitForSecondsRealtime(2f);
-        sinking = true;
+        isDead = true;
     }
     IEnumerator Hit()
     {

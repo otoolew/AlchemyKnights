@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlchemyKnights", "AlchemyKnights.csproj", "{99E4E05F-FA04-97E9-8524-0FED3B910F1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlchemyKnights.Editor", "AlchemyKnights.Editor.csproj", "{76B89A94-9DE7-DC04-BA15-E9D5130407AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99E4E05F-FA04-97E9-8524-0FED3B910F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E4E05F-FA04-97E9-8524-0FED3B910F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E4E05F-FA04-97E9-8524-0FED3B910F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E4E05F-FA04-97E9-8524-0FED3B910F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76B89A94-9DE7-DC04-BA15-E9D5130407AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76B89A94-9DE7-DC04-BA15-E9D5130407AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76B89A94-9DE7-DC04-BA15-E9D5130407AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76B89A94-9DE7-DC04-BA15-E9D5130407AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

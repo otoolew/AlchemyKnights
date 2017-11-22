@@ -15,4 +15,4 @@ MonoBehaviour:
   abilitySprite: {fileID: 21300000, guid: 99262459dc04af544a8e56796adaaed6, type: 3}
   abilityBaseCoolDown: 1
   projectileForce: 250
-  projectile: {fileID: 5400000, guid: 3e1b2df5b9db3bc479cf5e383f2f23e4, type: 2}
+  projectile: {fileID: 5400000, guid: 538360dad8d90fe438d0b88cabc31eaf, type: 2}

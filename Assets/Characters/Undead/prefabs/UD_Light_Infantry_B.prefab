@@ -514,7 +514,6 @@ GameObject:
   - component: {fileID: 54022490991933954}
   - component: {fileID: 195956354766129402}
   - component: {fileID: 136823081372532046}
-  - component: {fileID: 114896651692665136}
   - component: {fileID: 114719567400498546}
   - component: {fileID: 114893378695461160}
   m_Layer: 2
@@ -1251,7 +1250,7 @@ Animator:
   m_GameObject: {fileID: 1854888702507694}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1851e3e6c3e77d648a0cc1ef90d895fa, type: 3}
-  m_Controller: {fileID: 9100000, guid: dace59d5ca205ae4987b2dc608e26bb4, type: 2}
+  m_Controller: {fileID: 22100000, guid: 245304dd7bf4eed4da10e1c2b27aa1b6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1309,21 +1308,7 @@ MonoBehaviour:
   enemyState: 0
   startingPosition: {x: 0, y: 0, z: 0}
   cooldown: 1
---- !u!114 &114896651692665136
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1854888702507694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5956d8d89f68f645912cc0a0cb8cd94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 100
-  sinkSpeed: 0.5
-  scoreValue: 10
+  healthPoints: 100
 --- !u!135 &135945233491363790
 SphereCollider:
   m_ObjectHideFlags: 1
