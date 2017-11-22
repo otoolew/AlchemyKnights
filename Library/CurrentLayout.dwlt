@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 321}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 950, y: 321}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_MinSize: {x: 909, y: 271}
   m_MaxSize: {x: 22004, y: 10021}
   vertical: 1
-  controlID: 73
+  controlID: 35
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 909, y: 271}
   m_MaxSize: {x: 22004, y: 10021}
   vertical: 0
-  controlID: 74
+  controlID: 36
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.6353958, y: 0.15755038, z: -0.134241, w: -0.7439519}
     speed: 2
-    m_Value: {x: -0.6353847, y: 0.15754762, z: -0.13423865, w: -0.74393886}
+    m_Value: {x: -0.6353958, y: 0.15755038, z: -0.13424098, w: -0.74395186}
   m_Size:
     m_Target: 22
     speed: 2
@@ -522,7 +522,7 @@ MonoBehaviour:
     y: 92
     width: 275
     height: 710
-  m_ScrollPosition: {x: 0, y: 130.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 153
@@ -557,9 +557,9 @@ MonoBehaviour:
     height: 710
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b8faffff
-    m_LastClickedID: -1352
-    m_ExpandedIDs: cc3cf9ffb8e3ffffc4e3ffffaafaffffa6fbffff000000004e860000
+    m_SelectedIDs: cab10000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 04deffffa6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -646,19 +646,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Scripts/Player
+    - Assets/_Scripts/StatusEffect
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/_Scripts/Player
+  - Assets/_Scripts/StatusEffect
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\William O'Toole\Documents\UnityProjects\AlchemyKnights
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 427c0000
-    m_LastClickedID: 31810
-    m_ExpandedIDs: 0000000074280000d23900004a3b000002490000cc490000124b000052540000f65400001e580000505b0000fc5b0000a2610000ae6b0000d476000046ac000048ac00004aac00004cac000000ca9a3bffffff7f
+    m_SelectedIDs: beb10000
+    m_LastClickedID: 45502
+    m_ExpandedIDs: 0000000076280000d439000004490000ce490000144b000054540000f854000020580000525b0000fe5b0000a4610000b06b0000d67600004cac00004eac000050ac000052ac000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -686,7 +686,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000074280000d23900004a3b000002490000cc490000124b000052540000f65400001e580000505b0000fc5b0000a2610000ae6b0000d476000046ac000048ac00004aac00004cac0000
+    m_ExpandedIDs: 0000000076280000d43900004c3b000004490000ce490000144b000054540000f854000020580000525b0000fe5b0000a4610000b06b0000d67600004cac00004eac000050ac000052ac0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -717,18 +717,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 6422000086390000fa430000c42400001e270000bc280000c440000026380000d2400000ce240000c6a9ffffb23a000096230000ec2a0000d238000068230000a032ffff7a3500000824000038230000dc240000de230000f0220000ea220000502400000027000052240000ec22000054240000ee220000a4240000d806ffff1c2400006a36feffbe2400008634fdff422400003e240000a6240000402400001c260000da78fcff402c0000642c000074330000ac3000001826000002320000962e0000882700001c300000103100001632000004a7ffff262a00002c2a0000323200001e3200008c2e00006c330000023500003c2e0000c82e00009e360000c43100009a3000006c2a0000902600009c2e0000be260000122f00003a290000f65f0000de11feff062b000038260000f62d0000d82d000060360000de3700005a3600006c640000129501007279050086990100c4700000aa6200003e10010050ef0100807c00008e480200b64500001c360000702f00001c560000924a000024490000a84900003acffbffb840000000000000e03f00007675f6fffa340000ac3700008498feff80abfaff1e440000ea4a0000f4410000f64a0000722dffff2678feff92460000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: PoisonStatusEffect
-      m_OriginalName: PoisonStatusEffect
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 179402
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:

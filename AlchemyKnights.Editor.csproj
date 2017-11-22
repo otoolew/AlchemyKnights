@@ -288,29 +288,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\ProceduralToolkit\Editor\MeshFilterExtension.cs" />
-    <Compile Include="Assets\Code\ProceduralToolkit\Editor\ProceduralToolkitMenu.cs" />
-    <Compile Include="Assets\Code\ProceduralToolkit\Examples\BuildingGenerator\Editor\BuildingGeneratorConfiguratorEditor.cs" />
-    <Compile Include="Assets\Code\ProceduralToolkit\Examples\ChairGenerator\Editor\ChairGeneratorConfiguratorEditor.cs" />
-    <Compile Include="Assets\Code\ProceduralToolkit\Examples\LowPolyTerrainGenerator\Editor\LowPolyTerrainGeneratorConfiguratorEditor.cs" />
+    <Compile Include="Assets\_Frameworks\ProceduralToolkit\Editor\MeshFilterExtension.cs" />
+    <Compile Include="Assets\_Frameworks\ProceduralToolkit\Editor\ProceduralToolkitMenu.cs" />
+    <Compile Include="Assets\_Frameworks\ProceduralToolkit\Examples\BuildingGenerator\Editor\BuildingGeneratorConfiguratorEditor.cs" />
+    <Compile Include="Assets\_Frameworks\ProceduralToolkit\Examples\ChairGenerator\Editor\ChairGeneratorConfiguratorEditor.cs" />
+    <Compile Include="Assets\_Frameworks\ProceduralToolkit\Examples\LowPolyTerrainGenerator\Editor\LowPolyTerrainGeneratorConfiguratorEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Characters\Orcs\models\textures\ColorCoded\Color Coding readme.txt" />
-    <None Include="Assets\Code\ProceduralToolkit\Examples\CharacterGenerator\Sprites\license.txt" />
-    <None Include="Assets\Code\ProceduralToolkit\Examples\CharacterGenerator\names.txt" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Debug\Debug Bitangents.shader" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Debug\Debug Normals.shader" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Debug\Debug Tangents.shader" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Debug\Debug UV1.shader" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Debug\Debug UV2.shader" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Diffuse Vertex Color.shader" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Gradient Skybox.shader" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Specular Vertex Color.shader" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Standard Vertex Color.shader" />
-    <None Include="Assets\Code\ProceduralToolkit\Shaders\Unlit Vertex Color.shader" />
     <None Include="Assets\Enviroment\Info.txt" />
     <None Include="Assets\MagicEffects\MagicArsenal - ReadMe.txt" />
     <None Include="Assets\UI\Fonts\OpenSans\License!.txt" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Examples\CharacterGenerator\Sprites\license.txt" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Examples\CharacterGenerator\names.txt" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug Bitangents.shader" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug Normals.shader" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug Tangents.shader" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug UV1.shader" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug UV2.shader" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Diffuse Vertex Color.shader" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Gradient Skybox.shader" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Specular Vertex Color.shader" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Standard Vertex Color.shader" />
+    <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Unlit Vertex Color.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
