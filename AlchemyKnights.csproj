@@ -264,6 +264,7 @@
     <Compile Include="Assets\_Scripts\ToxicStatusEffects\DamageOverTime.cs" />
     <Compile Include="Assets\_Scripts\ToxicStatusEffects\DiscoLights.cs" />
     <Compile Include="Assets\_Scripts\ToxicStatusEffects\HealOverTIme.cs" />
+    <Compile Include="Assets\_Scripts\ToxicStatusEffects\PoisonStatusEffect.cs" />
     <Compile Include="Assets\_Scripts\ToxicStatusEffects\TimedStatusEffect.cs" />
     <Compile Include="Assets\_Scripts\ToxicStatusEffects\ToxicManager.cs" />
     <Compile Include="Assets\_Scripts\UI\DontDestroy.cs" />

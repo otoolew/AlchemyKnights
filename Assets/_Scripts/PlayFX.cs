@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayFX : MonoBehaviour {
 
-    public ParticleSystem particleEffect;
+    public GameObject particleObject;
 
-    public void OnEnable()
+    public void EnableFX()
     {
-        particleEffect.Play();
+        particleObject.SetActive(true);
     }
+    public void DisableFX()
+    {
+        particleObject.SetActive(false);
+    }
+
 
 }

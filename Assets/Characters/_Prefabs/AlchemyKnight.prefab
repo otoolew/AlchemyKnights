@@ -853,7 +853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1929976463006010
 GameObject:
   m_ObjectHideFlags: 1
@@ -2795,7 +2795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a311a0b9c2d7d54ab97d127742f5600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poisoned: 0
   toxicManager: {fileID: 0}
   healthSlider: {fileID: 0}
   damageImage: {fileID: 0}
@@ -2805,104 +2804,11 @@ MonoBehaviour:
   sinkSpeed: 0.1
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  poisonParticles: {fileID: 0}
+  poisonParticles: {fileID: 198738928525257494}
+  healingParticles: {fileID: 198370109747947340}
+  dropPoint: {fileID: 0}
+  emptyPotionPrefabs: {fileID: 0}
   dizzy: {fileID: 114605309414324826}
-  OnPoison:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 198738928525257494}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 114698530472573146}
-        m_MethodName: ApplyPoison
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnCurePoison:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 198738928525257494}
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnDizzy:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114698530472573146}
-        m_MethodName: ApplyDizzy
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnCureDizzy:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114605309414324826}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnSlow:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 198018391853681770}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnCureSlow:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -3272,7 +3178,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1814813927
+  randomSeed: 252004888
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6541,7 +6447,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1710036906
+  randomSeed: 1994772444
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9807,7 +9713,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: 464449028
+  randomSeed: -367267627
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -13052,7 +12958,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -243368396
+  randomSeed: -474052797
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -16336,7 +16242,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 0
-  randomSeed: -1973705896
+  randomSeed: 746307712
   InitialModule:
     serializedVersion: 3
     enabled: 1
