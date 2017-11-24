@@ -7,7 +7,6 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(NavMeshAgent))]
-[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
@@ -16,10 +15,10 @@ public class PlayerController : MonoBehaviour
     private PlayerAbility playerAbility;
     public LayerMask layerMask;
     private Ray ray;
-    private RaycastHit rayHit;
+    private RaycastHit rayHit = new RaycastHit();
     public Transform launchPoint;
-    public LineRenderer lineRender;
-      
+    private bool moving = false;
+    
     private void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
@@ -31,31 +30,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (!navAgent.isActiveAndEnabled)
-        {
-            if (navAgent.stoppingDistance > navAgent.remainingDistance)
-            {
-                animator.SetBool("Idle", true);
-                animator.SetBool("Running", false);
-            }
-            else
-            {
-                animator.SetBool("Idle", false);
-                animator.SetBool("Running", true);
-            }
-        }
-           
-        if (navAgent.stoppingDistance > navAgent.remainingDistance)
-        {
-            animator.SetBool("Idle", true);
-            animator.SetBool("Running", false);
-        }
-        else
-        {
-            animator.SetBool("Idle", false);
-            animator.SetBool("Running", true);
-        }
-
         if (Input.GetMouseButton(0))
         {
             if (!EventSystem.current.IsPointerOverGameObject())
@@ -65,11 +39,23 @@ public class PlayerController : MonoBehaviour
           
                 if (Physics.Raycast(ray, out hit,100f,layerMask))
                 {
-                    navAgent.SetDestination(hit.point);
+                    moving = true;
+                    navAgent.destination = hit.point;
                     navAgent.isStopped = false;
                 }
             }
         }
+        if (navAgent.remainingDistance <= navAgent.stoppingDistance)
+        {
+            if (!navAgent.hasPath || Mathf.Abs(navAgent.velocity.sqrMagnitude) < float.Epsilon)
+                moving = false;
+        }
+        else
+        {
+            moving = true;
+        }
+        animator.SetBool("IsMoving", moving);
+
         if (Input.GetMouseButton(1))
         {
             //Debug.Log("Mouse 1");
@@ -78,7 +64,6 @@ public class PlayerController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out rayHit, 100, layerMask))
             {
- 
                 var lookPos = rayHit.point - transform.position;
                 lookPos.y = 0;
                 Quaternion rotation = Quaternion.LookRotation(lookPos);
@@ -86,25 +71,15 @@ public class PlayerController : MonoBehaviour
                 Vector3 hitPoint = rayHit.point;
                 Vector3 vector = new Vector3(0, 1, 0);
                 var newPoint = hitPoint + vector;
-
-                launchPoint.transform.LookAt(newPoint);
-                //Debug.Log(rayHit.point);              
+                launchPoint.transform.LookAt(newPoint);           
             }
         }
-        // For Debug
-        if (Input.GetKey(KeyCode.A))
-            animator.SetTrigger("Attack");
-        if (Input.GetKey(KeyCode.S))
-        {
-            animator.SetBool("Casting", true);
-        }
-
     }
-    public void DeathSequence()
+
+    public void OnDeath()
     {
         navAgent.enabled = false;
         playerAbility.enabled = false;
-        // Trigger Damage Animation
         animator.SetTrigger("Death");
     }
 }

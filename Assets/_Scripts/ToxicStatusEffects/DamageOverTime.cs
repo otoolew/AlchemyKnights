@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DamageOverTime : TimedStatusEffect
 {
+    public int damage;
 
-    public int amount;
     protected override void ApplyEffect()
     {
-        playerHealth.TakeDamage(amount);
+       
     }
 }

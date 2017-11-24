@@ -7,6 +7,7 @@ using UnityEngine.AI;
 
 
 public class PlayerHealth : MonoBehaviour {
+    public GameObject deathPanelUI;
     private Animator animator;                                          // Reference to the animator.
 
     private bool isDead;
@@ -47,7 +48,6 @@ public class PlayerHealth : MonoBehaviour {
         animator = GetComponentInParent<Animator>();
         //enemyAudio = GetComponent<AudioSource>();
         //hitParticles = GetComponentInChildren<ParticleSystem>();
-
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
     }
@@ -71,6 +71,11 @@ public class PlayerHealth : MonoBehaviour {
         {
             Debug.Log("Blind");
             ApplyBlind();
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("=========PLAYER===========DIED==========");
+            Death();
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -194,18 +199,13 @@ public class PlayerHealth : MonoBehaviour {
             healthSlider.value = currentHealth;
             tickTimer = 0;
         }
-
-        if (currentHealth <= 0 && !isDead)
-        {
-            // ... it should die.
-            Death();
-        }
     }
     public void CurePoison()
     {
         poisoned = false;
-        if (poisonParticles.isPlaying)
-            poisonParticles.Stop();
+        poisonParticles.Stop();
+        //if (poisonParticles.isPlaying)
+        //    poisonParticles.Stop();
     }
     public void HealDamage(int amount)
     {

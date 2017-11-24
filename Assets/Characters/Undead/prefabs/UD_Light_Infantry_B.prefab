@@ -522,7 +522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1900701575328376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,7 +1253,7 @@ Animator:
   m_Controller: {fileID: 22100000, guid: 245304dd7bf4eed4da10e1c2b27aa1b6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1280,6 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53fb57c6564c8444f88a9c3a197ef53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitDamage: 25
   collisionTags:
   - Player
 --- !u!114 &114719567400498546

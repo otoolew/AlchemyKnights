@@ -55,10 +55,10 @@ public class PotionPage : MonoBehaviour {
     {
         imageSprite = currentPotion.itemSprite;
         pageName.text = currentPotion.itemName;
-        pageUse.text = "Use: " + currentPotion.potionUse;
-        pagePurpose.text = "Purpose: " + currentPotion.potionPurpose;
-        pageActiveIngredient.text = "Active Ingredients: " + currentPotion.potionActiveIngredient;
-        pageHalfLife.text = "Half Life (Seconds): " + currentPotion.potionHalfLife;
-        pageWarning.text = "Warnings: " + currentPotion.potionWarning;
+        pageUse.text = currentPotion.potionUse;
+        pagePurpose.text = currentPotion.potionPurpose;
+        pageActiveIngredient.text = currentPotion.potionActiveIngredient;
+        pageHalfLife.text = "(Seconds): " + currentPotion.potionHalfLife;
+        pageWarning.text = currentPotion.potionWarning;
     }
 }
