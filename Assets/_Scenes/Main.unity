@@ -171,99 +171,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4357225699329524, guid: 60900b904e9399e43bc77e61cc1b0750,
     type: 2}
   m_PrefabInternal: {fileID: 11167347}
---- !u!1001 &15307335
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114608510531572768, guid: a94da262c50935e4cbc06738e8517fd5,
-        type: 2}
-      propertyPath: abilityIcon
-      value: 
-      objectReference: {fileID: 1503018709}
-    - target: {fileID: 114608510531572768, guid: a94da262c50935e4cbc06738e8517fd5,
-        type: 2}
-      propertyPath: darkMask
-      value: 
-      objectReference: {fileID: 1538667597}
-    - target: {fileID: 114608510531572768, guid: a94da262c50935e4cbc06738e8517fd5,
-        type: 2}
-      propertyPath: coolDownTextDisplay
-      value: 
-      objectReference: {fileID: 142089488}
-    - target: {fileID: 114698530472573146, guid: a94da262c50935e4cbc06738e8517fd5,
-        type: 2}
-      propertyPath: toxicManager
-      value: 
-      objectReference: {fileID: 642055275}
-    - target: {fileID: 114698530472573146, guid: a94da262c50935e4cbc06738e8517fd5,
-        type: 2}
-      propertyPath: healthSlider
-      value: 
-      objectReference: {fileID: 1642344236}
-    - target: {fileID: 114698530472573146, guid: a94da262c50935e4cbc06738e8517fd5,
-        type: 2}
-      propertyPath: damageImage
-      value: 
-      objectReference: {fileID: 2102274958}
-    - target: {fileID: 114698530472573146, guid: a94da262c50935e4cbc06738e8517fd5,
-        type: 2}
-      propertyPath: blindImage
-      value: 
-      objectReference: {fileID: 305124040}
-    - target: {fileID: 1871550638276122, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114698530472573146, guid: a94da262c50935e4cbc06738e8517fd5,
-        type: 2}
-      propertyPath: deathPanelUI
-      value: 
-      objectReference: {fileID: 17192759}
-    - target: {fileID: 114921774283296992, guid: a94da262c50935e4cbc06738e8517fd5,
-        type: 2}
-      propertyPath: timeBetweenTick
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114426154221514038, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-    - {fileID: 114921774283296992, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &17192759
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +183,6 @@ GameObject:
   - component: {fileID: 17192763}
   - component: {fileID: 17192762}
   - component: {fileID: 17192761}
-  - component: {fileID: 642055275}
   m_Layer: 5
   m_Name: UIManager
   m_TagString: PlayerStats
@@ -292,7 +198,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 17192759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 593.5, y: 446.5, z: 0}
+  m_LocalPosition: {x: 535, y: 454.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 29767389}
@@ -434,7 +340,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 23448045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -432.2, y: 139.9, z: 0}
+  m_LocalPosition: {x: -373.7, y: 147.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1136696502}
@@ -694,6 +600,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1893145979}
+        m_MethodName: HealDamage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 25
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1179238574}
         m_MethodName: TakePotion
         m_Mode: 3
         m_Arguments:
@@ -1960,6 +1877,98 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 465419503}
+--- !u!1001 &471734460
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329831357624572, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114676339262259148, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: toxicSliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 833567984}
+    - target: {fileID: 114676339262259148, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: toxicSliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 435961569}
+    - target: {fileID: 114676339262259148, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: toxicSliders.Array.data[2]
+      value: 
+      objectReference: {fileID: 1263322599}
+    - target: {fileID: 114676339262259148, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: toxicSliders.Array.data[3]
+      value: 
+      objectReference: {fileID: 59194919}
+    - target: {fileID: 114676339262259148, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: BlindEffect
+      value: 
+      objectReference: {fileID: 1290101981}
+    - target: {fileID: 114608510531572768, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: abilityIcon
+      value: 
+      objectReference: {fileID: 1503018709}
+    - target: {fileID: 114608510531572768, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: darkMask
+      value: 
+      objectReference: {fileID: 1538667597}
+    - target: {fileID: 114608510531572768, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: coolDownTextDisplay
+      value: 
+      objectReference: {fileID: 142089488}
+    - target: {fileID: 114698530472573146, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1642344236}
+    - target: {fileID: 114698530472573146, guid: a94da262c50935e4cbc06738e8517fd5,
+        type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 2102274958}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a94da262c50935e4cbc06738e8517fd5, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &532795915
 Prefab:
   m_ObjectHideFlags: 0
@@ -2386,25 +2395,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 625028405}
---- !u!114 &642055275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114485759228440298, guid: 31738779436218d4587ef51b99da61c5,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 17192759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca9c8648e303284499579365fab7f61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toxicSliders:
-  - {fileID: 833567984}
-  - {fileID: 435961569}
-  - {fileID: 1263322599}
-  - {fileID: 59194919}
-  reduceAmountPerSec: 5
-  halfLife: 2
 --- !u!1 &684922766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,7 +2535,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 736249955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -566.5, y: 427.5, z: 0}
+  m_LocalPosition: {x: -508, y: 435.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 226948959}
@@ -2617,7 +2607,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 766470933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -371.5, z: 0}
+  m_LocalPosition: {x: 0, y: -379.5, z: 0}
   m_LocalScale: {x: 1.5907208, y: 1.5907208, z: 1.5907208}
   m_Children:
   - {fileID: 1242244365}
@@ -2885,13 +2875,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1893145979}
+      - m_Target: {fileID: 1179238574}
         m_MethodName: TakePotion
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1179238579}
+        m_MethodName: EndEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3665,13 +3666,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1893145979}
+      - m_Target: {fileID: 1179238574}
         m_MethodName: TakePotion
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1179238575}
+        m_MethodName: EndEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3868,7 +3880,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1170606717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 593.5, y: 446.5, z: 0}
+  m_LocalPosition: {x: 535, y: 454.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 17192760}
@@ -3980,6 +3992,24 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1170606717}
+--- !u!114 &1179238574 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114676339262259148, guid: a94da262c50935e4cbc06738e8517fd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 471734460}
+  m_Script: {fileID: 11500000, guid: eca9c8648e303284499579365fab7f61, type: 3}
+--- !u!114 &1179238575 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114563345649618456, guid: a94da262c50935e4cbc06738e8517fd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 471734460}
+  m_Script: {fileID: 11500000, guid: 25d3e877b6bc4b54d9d1b7e4a42e0411, type: 3}
+--- !u!114 &1179238579 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114223718439446214, guid: a94da262c50935e4cbc06738e8517fd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 471734460}
+  m_Script: {fileID: 11500000, guid: 737ee4b967f8de7478f5ec1cbd5f89a4, type: 3}
 --- !u!1001 &1209364471
 Prefab:
   m_ObjectHideFlags: 0
@@ -4190,7 +4220,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1222926686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 593.5, y: 0, z: 0}
+  m_LocalPosition: {x: 535, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 30774034}
@@ -4360,7 +4390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1290101981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4874,13 +4904,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1893145979}
+      - m_Target: {fileID: 1179238574}
         m_MethodName: TakePotion
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1290101981}
+        m_MethodName: CureBlind
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5514,7 +5555,7 @@ Transform:
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114698530472573146, guid: a94da262c50935e4cbc06738e8517fd5,
     type: 2}
-  m_PrefabInternal: {fileID: 15307335}
+  m_PrefabInternal: {fileID: 471734460}
   m_Script: {fileID: 11500000, guid: 7a311a0b9c2d7d54ab97d127742f5600, type: 3}
 --- !u!1 &1995143871
 GameObject:

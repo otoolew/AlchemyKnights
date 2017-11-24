@@ -30,56 +30,52 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (navAgent.isActiveAndEnabled)
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
-            {          
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-          
-                if (Physics.Raycast(ray, out hit,100f,layerMask))
+            if (Input.GetMouseButton(0))
+            {
+                if (!EventSystem.current.IsPointerOverGameObject())
                 {
-                    moving = true;
-                    navAgent.destination = hit.point;
-                    navAgent.isStopped = false;
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hit;
+
+                    if (Physics.Raycast(ray, out hit, 100f, layerMask))
+                    {
+                        moving = true;
+                        navAgent.destination = hit.point;
+                        navAgent.isStopped = false;
+                    }
+                }
+            }
+            if (navAgent.remainingDistance <= navAgent.stoppingDistance)
+            {
+                if (!navAgent.hasPath || Mathf.Abs(navAgent.velocity.sqrMagnitude) < float.Epsilon)
+                    moving = false;
+            }
+            else
+            {
+                moving = true;
+            }
+            animator.SetBool("IsMoving", moving);
+
+            if (Input.GetMouseButton(1))
+            {
+                //Debug.Log("Mouse 1");
+                navAgent.SetDestination(transform.position);
+                Vector3 mousePosition = new Vector3(Input.mousePosition.x, transform.position.y, Input.mousePosition.z);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out rayHit, 100, layerMask))
+                {
+                    var lookPos = rayHit.point - transform.position;
+                    lookPos.y = 0;
+                    Quaternion rotation = Quaternion.LookRotation(lookPos);
+                    transform.rotation = rotation;
+                    Vector3 hitPoint = rayHit.point;
+                    Vector3 vector = new Vector3(0, 1, 0);
+                    var newPoint = hitPoint + vector;
+                    launchPoint.transform.LookAt(newPoint);
                 }
             }
         }
-        if (navAgent.remainingDistance <= navAgent.stoppingDistance)
-        {
-            if (!navAgent.hasPath || Mathf.Abs(navAgent.velocity.sqrMagnitude) < float.Epsilon)
-                moving = false;
-        }
-        else
-        {
-            moving = true;
-        }
-        animator.SetBool("IsMoving", moving);
-
-        if (Input.GetMouseButton(1))
-        {
-            //Debug.Log("Mouse 1");
-            navAgent.SetDestination(transform.position);
-            Vector3 mousePosition = new Vector3(Input.mousePosition.x, transform.position.y, Input.mousePosition.z);
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out rayHit, 100, layerMask))
-            {
-                var lookPos = rayHit.point - transform.position;
-                lookPos.y = 0;
-                Quaternion rotation = Quaternion.LookRotation(lookPos);
-                transform.rotation = rotation;
-                Vector3 hitPoint = rayHit.point;
-                Vector3 vector = new Vector3(0, 1, 0);
-                var newPoint = hitPoint + vector;
-                launchPoint.transform.LookAt(newPoint);           
-            }
-        }
-    }
-
-    public void OnDeath()
-    {
-        navAgent.enabled = false;
-        playerAbility.enabled = false;
-        animator.SetTrigger("Death");
     }
 }

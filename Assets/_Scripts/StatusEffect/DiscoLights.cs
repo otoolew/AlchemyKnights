@@ -32,8 +32,16 @@ public class DiscoLights : MonoBehaviour {
         }
         else
         {
-            lt.intensity = 0;
+            
         }
 
+    }
+    public void DisableEffect()
+    {
+        isActive = false;
+    }
+    public void EnableEffect()
+    {
+        isActive = true;
     }
 }
