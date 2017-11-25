@@ -339,12 +339,13 @@
     <Compile Include="Assets\_Scripts\StatusEffect\PoisonDebuff.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\SlowDebuff.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\StatusEffect.cs" />
-    <Compile Include="Assets\_Scripts\StatusEffect\TestPoison.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\TimedStatusEffect.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\ToxicManager.cs" />
     <Compile Include="Assets\_Scripts\Testing\DressingRoom.cs" />
     <Compile Include="Assets\_Scripts\Testing\Puppet.cs" />
+    <Compile Include="Assets\_Scripts\UI\DeathOptions.cs" />
     <Compile Include="Assets\_Scripts\UI\DontDestroy.cs" />
+    <Compile Include="Assets\_Scripts\UI\EventSystemChecker.cs" />
     <Compile Include="Assets\_Scripts\UI\Pause.cs" />
     <Compile Include="Assets\_Scripts\UI\PlayMusic.cs" />
     <Compile Include="Assets\_Scripts\UI\PotionPage.cs" />
@@ -361,7 +362,6 @@
     <Compile Include="Assets\_Scripts\Utility\CurveControlledBob.cs" />
     <Compile Include="Assets\_Scripts\Utility\DragRigidbody.cs" />
     <Compile Include="Assets\_Scripts\Utility\DynamicShadowSettings.cs" />
-    <Compile Include="Assets\_Scripts\Utility\EventSystemChecker.cs" />
     <Compile Include="Assets\_Scripts\Utility\FollowTarget.cs" />
     <Compile Include="Assets\_Scripts\Utility\FOVKick.cs" />
     <Compile Include="Assets\_Scripts\Utility\FPSCounter.cs" />
@@ -388,6 +388,8 @@
   <ItemGroup>
     <None Include="Assets\Characters\Orcs\models\textures\ColorCoded\Color Coding readme.txt" />
     <None Include="Assets\Enviroment\Info.txt" />
+    <None Include="Assets\Enviroment\ToonForest\materials\TerrainMasked.shader" />
+    <None Include="Assets\Enviroment\ToonForest\materials\TerrainShader2Diff.shader" />
     <None Include="Assets\MagicEffects\MagicArsenal - ReadMe.txt" />
     <None Include="Assets\UI\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug Bitangents.shader" />

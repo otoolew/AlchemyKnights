@@ -286,6 +286,9 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Assembly-UnityScript">
+      <HintPath>Library\ScriptAssemblies\Assembly-UnityScript.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AlchemyKnights.csproj">
@@ -303,6 +306,8 @@
   <ItemGroup>
     <None Include="Assets\Characters\Orcs\models\textures\ColorCoded\Color Coding readme.txt" />
     <None Include="Assets\Enviroment\Info.txt" />
+    <None Include="Assets\Enviroment\ToonForest\materials\TerrainMasked.shader" />
+    <None Include="Assets\Enviroment\ToonForest\materials\TerrainShader2Diff.shader" />
     <None Include="Assets\MagicEffects\MagicArsenal - ReadMe.txt" />
     <None Include="Assets\UI\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug Bitangents.shader" />

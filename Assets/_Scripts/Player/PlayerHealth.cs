@@ -90,6 +90,7 @@ public class PlayerHealth : MonoBehaviour {
         playerController.enabled = false;
         playerAbility.enabled = false;
         animator.SetTrigger("Death");
+        OnDeath.Invoke();
     }
 
 }

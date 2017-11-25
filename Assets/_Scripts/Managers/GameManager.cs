@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     PlayerController player;
@@ -9,14 +10,12 @@ public class GameManager : MonoBehaviour {
     {
         player = GetComponent<PlayerController>();
     }
-    void Start () {
-        
-
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("Main"); 
     }
-	
-	// Update is called once per frame
-	void Update () {
-        
-
+    public void QuitToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
