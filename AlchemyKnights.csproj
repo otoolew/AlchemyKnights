@@ -309,6 +309,7 @@
     <Compile Include="Assets\_Scripts\Abstract\Potion.cs" />
     <Compile Include="Assets\_Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\_Scripts\DisableTrigger.cs" />
+    <Compile Include="Assets\_Scripts\Enemy\EnemyAI.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyController.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyMelee.cs" />
@@ -316,6 +317,7 @@
     <Compile Include="Assets\_Scripts\Enemy\EnemyStats.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyVision.cs" />
     <Compile Include="Assets\_Scripts\Enemy\HitBox.cs" />
+    <Compile Include="Assets\_Scripts\Enemy\HitBox3D.cs" />
     <Compile Include="Assets\_Scripts\Enums\AttackType.cs" />
     <Compile Include="Assets\_Scripts\Enums\CollisionType.cs" />
     <Compile Include="Assets\_Scripts\Enums\EnemyState.cs" />
@@ -323,13 +325,17 @@
     <Compile Include="Assets\_Scripts\Enums\ProjectileType.cs" />
     <Compile Include="Assets\_Scripts\Enums\StatusCondition.cs" />
     <Compile Include="Assets\_Scripts\Enums\ToxicType.cs" />
-    <Compile Include="Assets\_Scripts\HitBox3D.cs" />
     <Compile Include="Assets\_Scripts\LifeTime.cs" />
     <Compile Include="Assets\_Scripts\Managers\DebugManager.cs" />
     <Compile Include="Assets\_Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\_Scripts\PlayFX.cs" />
+    <Compile Include="Assets\_Scripts\States\Attack.cs" />
+    <Compile Include="Assets\_Scripts\States\Chase.cs" />
+    <Compile Include="Assets\_Scripts\States\EnemyBaseFSM.cs" />
+    <Compile Include="Assets\_Scripts\States\Idle.cs" />
+    <Compile Include="Assets\_Scripts\States\Patrol.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\BlindStatusEffect.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\ConfusionDebuff.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\DamageOverTime.cs" />
@@ -386,7 +392,7 @@
     <Compile Include="Assets\MagicEffects\Scripts\MagicRotation.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Characters\Orcs\models\textures\ColorCoded\Color Coding readme.txt" />
+    <None Include="Assets\Characters\Orcs\Models\textures\ColorCoded\Color Coding readme.txt" />
     <None Include="Assets\Enviroment\Info.txt" />
     <None Include="Assets\Enviroment\ToonForest\materials\TerrainMasked.shader" />
     <None Include="Assets\Enviroment\ToonForest\materials\TerrainShader2Diff.shader" />

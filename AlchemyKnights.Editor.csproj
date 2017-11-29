@@ -304,7 +304,7 @@
     <Compile Include="Assets\_Frameworks\ProceduralToolkit\Examples\LowPolyTerrainGenerator\Editor\LowPolyTerrainGeneratorConfiguratorEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Characters\Orcs\models\textures\ColorCoded\Color Coding readme.txt" />
+    <None Include="Assets\Characters\Orcs\Models\textures\ColorCoded\Color Coding readme.txt" />
     <None Include="Assets\Enviroment\Info.txt" />
     <None Include="Assets\Enviroment\ToonForest\materials\TerrainMasked.shader" />
     <None Include="Assets\Enviroment\ToonForest\materials\TerrainShader2Diff.shader" />
