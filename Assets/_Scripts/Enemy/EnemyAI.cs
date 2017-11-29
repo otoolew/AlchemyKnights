@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour {
     Animator anim;
     GameObject player;
     NavMeshAgent navAgent;
+    public int healthPoints = 100;
     public float attackSpeed = 1f;
     public Transform firePoint;
 
@@ -21,6 +22,8 @@ public class EnemyAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         anim.SetFloat("distance", Vector3.Distance(transform.position, player.transform.position));
+        if (healthPoints <= 0)
+            anim.SetTrigger("Die");
 	}
     public GameObject GetPlayer()
     {
@@ -44,5 +47,10 @@ public class EnemyAI : MonoBehaviour {
     public void StopAttack()
     {
         CancelInvoke("Attack");
+    }
+    public void TakeDamage(int amount)
+    {
+        healthPoints-=amount;
+        anim.SetTrigger("Hit");
     }
 }

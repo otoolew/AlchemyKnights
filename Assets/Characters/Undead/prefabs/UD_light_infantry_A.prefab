@@ -377,9 +377,9 @@ GameObject:
   m_Component:
   - component: {fileID: 417504}
   - component: {fileID: 9531258}
-  - component: {fileID: 54461011689808536}
-  - component: {fileID: 136761538521240404}
   - component: {fileID: 195615514415174414}
+  - component: {fileID: 136761538521240404}
+  - component: {fileID: 114108472887409402}
   - component: {fileID: 114074841630884676}
   m_Layer: 0
   m_Name: UD_light_infantry_A
@@ -635,6 +635,7 @@ Transform:
   - {fileID: 491304}
   - {fileID: 411280}
   - {fileID: 430840}
+  - {fileID: 4184308875055568}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1339,21 +1340,34 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 170012}
   m_IsPrefabParent: 1
---- !u!54 &54461011689808536
-Rigidbody:
+--- !u!1 &1442937463803494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4184308875055568}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4184308875055568
+Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170012}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: Infinity
-  m_AngularDrag: Infinity
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_GameObject: {fileID: 1442937463803494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 417504}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114074841630884676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1365,7 +1379,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe5fab3fc3319f4a8705bf9a94fc8dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
+  healthPoints: 100
+  attackSpeed: 1
+  firePoint: {fileID: 4184308875055568}
+--- !u!114 &114108472887409402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5956d8d89f68f645912cc0a0cb8cd94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 100
+  sinkSpeed: 0.5
+  scoreValue: 10
 --- !u!114 &114963077200488168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1421,7 +1452,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.1
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

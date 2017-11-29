@@ -4,7 +4,6 @@ using System.Collections;
 public class MagicProjectileScript : MonoBehaviour
 {
     public ProjectileType projectileType;
-    private EnemyController enemyController;
     public int damage = 0;
     public GameObject impactParticle;
     public GameObject projectileParticle;
@@ -38,8 +37,7 @@ public class MagicProjectileScript : MonoBehaviour
                 case ProjectileType.Precision:
                     if (hit.gameObject.tag == "Enemy") // Projectile will destroy objects tagged as Destructible
                     {
-                        enemyController = hit.gameObject.GetComponent<EnemyController>();
-                        enemyController.TakeDamage(damage);
+                        hit.gameObject.GetComponent<EnemyAI>().TakeDamage(damage);
                     }
                     break;
                 case ProjectileType.Area:
@@ -84,8 +82,7 @@ public class MagicProjectileScript : MonoBehaviour
             if (hitColliders[i].gameObject.tag == "Enemy") // Projectile will destroy objects tagged as Destructible
             {
                 Debug.Log("Blast Hit " + hitColliders[i].gameObject.name);
-                enemyController = hitColliders[i].gameObject.GetComponent<EnemyController>();
-                enemyController.TakeDamage(damage);
+                hitColliders[i].gameObject.GetComponent<EnemyAI>().TakeDamage(damage);
             }
             i++;
         }
