@@ -31,7 +31,6 @@ public class Patrol : EnemyBaseFSM
             currentWP++;
             if (currentWP >= wayPoints.Length)
             {
-                Debug.Log("True");
                 currentWP = 0;
             }
         }
@@ -42,7 +41,7 @@ public class Patrol : EnemyBaseFSM
         lookPos.y = 0;
         Quaternion rotation = Quaternion.LookRotation(lookPos);
         enemy.transform.rotation = rotation;
-        Debug.Log(enemy.name + " Patrol State " + currentWP + " of "+ wayPoints.Length);
+        //Debug.Log(enemy.name + " Patrol State " + currentWP + " of "+ wayPoints.Length);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

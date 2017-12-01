@@ -8,6 +8,7 @@ public class Attack : EnemyBaseFSM {
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         enemy.GetComponent<EnemyAI>().StartAttack();
+        enemy.GetComponentInChildren<HitBox3D>().capsuleCollider.enabled = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -20,6 +21,6 @@ public class Attack : EnemyBaseFSM {
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //enemy.GetComponent<EnemyAI>().StopAttack();
+        enemy.GetComponentInChildren<HitBox3D>().capsuleCollider.enabled = false;
     }
 }

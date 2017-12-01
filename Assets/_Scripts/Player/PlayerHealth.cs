@@ -16,8 +16,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public int startingHealth = 100;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
-    public float sinkSpeed = 0.1f;                              // The speed at which the enemy sinks through the floor when dead.  
-
+    
     public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
 
@@ -64,7 +63,7 @@ public class PlayerHealth : MonoBehaviour {
     public void TakeDamage(int amount)
     {
         damaged = true;
-        animator.SetTrigger("Damage");
+        //animator.SetTrigger("Damage");
         currentHealth -= amount;
     }
     public void HealDamage(int amount)
