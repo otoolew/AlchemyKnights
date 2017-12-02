@@ -9599,7 +9599,7 @@ MonoBehaviour:
   ItemsToTurnOff:
   - {fileID: 2022116095}
   other: {fileID: 1835992965}
-  speakingDistance: 3
+  speakingDistance: 4
 --- !u!23 &2058433089
 MeshRenderer:
   m_ObjectHideFlags: 0
