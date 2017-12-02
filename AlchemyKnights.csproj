@@ -326,6 +326,8 @@
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\_Scripts\PlayFX.cs" />
+    <Compile Include="Assets\_Scripts\Projectiles\EnemyProjectile.cs" />
+    <Compile Include="Assets\_Scripts\Projectiles\Projectile.cs" />
     <Compile Include="Assets\_Scripts\StateMachine\Attack.cs" />
     <Compile Include="Assets\_Scripts\StateMachine\Chase.cs" />
     <Compile Include="Assets\_Scripts\StateMachine\Die.cs" />
