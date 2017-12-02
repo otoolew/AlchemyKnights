@@ -310,6 +310,7 @@
     <Compile Include="Assets\_Scripts\Camera\CameraFollow.cs" />
     <Compile Include="Assets\_Scripts\DisableTrigger.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyAI.cs" />
+    <Compile Include="Assets\_Scripts\Enemy\EnemyArrow.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\_Scripts\Enemy\EnemyStats.cs" />
     <Compile Include="Assets\_Scripts\Enemy\HitBox3D.cs" />
@@ -335,6 +336,7 @@
     <Compile Include="Assets\_Scripts\StateMachine\Hit.cs" />
     <Compile Include="Assets\_Scripts\StateMachine\Idle.cs" />
     <Compile Include="Assets\_Scripts\StateMachine\Patrol.cs" />
+    <Compile Include="Assets\_Scripts\StateMachine\Wander.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\BlindStatusEffect.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\ConfusionDebuff.cs" />
     <Compile Include="Assets\_Scripts\StatusEffect\DamageOverTime.cs" />

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 13500000}
   - component: {fileID: 5400000}
   - component: {fileID: 114683986494294734}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireNormalObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}

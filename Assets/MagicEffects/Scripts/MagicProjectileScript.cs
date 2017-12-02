@@ -23,6 +23,7 @@ public class MagicProjectileScript : MonoBehaviour
             muzzleParticle = Instantiate(muzzleParticle, transform.position, transform.rotation) as GameObject;
             Destroy(muzzleParticle, 1.5f); // Lifetime of muzzle effect.
         }
+        Destroy(gameObject, 3f);
     }
     void OnCollisionEnter(Collision hit)
     {

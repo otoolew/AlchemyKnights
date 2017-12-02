@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
     public ProjectileType projectileType;
-    public int damage = 0;
+    public int damage = 10;
     public GameObject impactParticle;
     public GameObject projectileParticle;
     public GameObject muzzleParticle;
@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour {
                 case ProjectileType.Precision:
                     if (hit.gameObject.tag == "Enemy") // Projectile will destroy objects tagged as Destructible
                     {
-                        hit.gameObject.GetComponent<EnemyAI>().TakeDamage(damage);
+                        hit.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
                     }
                     break;
                 case ProjectileType.Area:
@@ -82,7 +82,7 @@ public class Projectile : MonoBehaviour {
             if (hitColliders[i].gameObject.tag == "Enemy") // Projectile will destroy objects tagged as Destructible
             {
                 Debug.Log("Blast Hit " + hitColliders[i].gameObject.name);
-                hitColliders[i].gameObject.GetComponent<EnemyAI>().TakeDamage(damage);
+                hitColliders[i].gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
             }
             i++;
         }

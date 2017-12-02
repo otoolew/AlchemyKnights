@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4070938876476002}
   - component: {fileID: 54623441385063898}
   - component: {fileID: 136519560269368464}
+  - component: {fileID: 114065920411063050}
+  - component: {fileID: 114055139145288800}
   m_Layer: 0
   m_Name: Orc_Arrow
   m_TagString: Untagged
@@ -128,6 +130,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 0
+--- !u!114 &114055139145288800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506178651885904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa4e61f62765b14dba41a412596d0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  projectileParticle: {fileID: 1548536273117842, guid: 7fcb38448ea12f140a37b349b5b98bb7,
+    type: 2}
+--- !u!114 &114065920411063050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506178651885904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0c5fea1e2236344b11be03587694c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToLive: 0
 --- !u!136 &136519560269368464
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -138,6 +166,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.1
-  m_Height: 1.35
+  m_Height: 1
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.15}

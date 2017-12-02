@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 13500000}
   - component: {fileID: 5400000}
   - component: {fileID: 11480590}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ArcaneNormalObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,6 +72,7 @@ MonoBehaviour:
   muzzleParticle: {fileID: 112336, guid: e50c699406fc10a4783f72816b25468f, type: 2}
   trailParticles: []
   impactNormal: {x: 0, y: 0, z: 0}
+  blastRadius: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
