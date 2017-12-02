@@ -297,6 +297,7 @@
     <Compile Include="Assets\_Frameworks\ProceduralToolkit\Examples\BuildingGenerator\Editor\BuildingGeneratorConfiguratorEditor.cs" />
     <Compile Include="Assets\_Frameworks\ProceduralToolkit\Examples\ChairGenerator\Editor\ChairGeneratorConfiguratorEditor.cs" />
     <Compile Include="Assets\_Frameworks\ProceduralToolkit\Examples\LowPolyTerrainGenerator\Editor\LowPolyTerrainGeneratorConfiguratorEditor.cs" />
+    <Compile Include="Assets\RPGTALK\Editor\RPGTalkEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Characters\Orcs\models\textures\ColorCoded\Color Coding readme.txt" />
@@ -304,6 +305,9 @@
     <None Include="Assets\Enviroment\ToonForest\materials\TerrainMasked.shader" />
     <None Include="Assets\Enviroment\ToonForest\materials\TerrainShader2Diff.shader" />
     <None Include="Assets\MagicEffects\MagicArsenal - ReadMe.txt" />
+    <None Include="Assets\RPGTALK\Demo\Talks\DemosText.txt" />
+    <None Include="Assets\RPGTALK\PotionMasterSpeak.txt" />
+    <None Include="Assets\RPGTALK\ReadMe.txt" />
     <None Include="Assets\UI\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug Bitangents.shader" />
     <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug Normals.shader" />

@@ -362,6 +362,7 @@
     <Compile Include="Assets\_Scripts\Utility\AlphaButtonClickMask.cs" />
     <Compile Include="Assets\_Scripts\Utility\AutoMobileShaderSwitch.cs" />
     <Compile Include="Assets\_Scripts\Utility\AutoMoveAndRotate.cs" />
+    <Compile Include="Assets\_Scripts\Utility\Billboard.cs" />
     <Compile Include="Assets\_Scripts\Utility\CameraRefocus.cs" />
     <Compile Include="Assets\_Scripts\Utility\CurveControlledBob.cs" />
     <Compile Include="Assets\_Scripts\Utility\DragRigidbody.cs" />
@@ -379,6 +380,7 @@
     <Compile Include="Assets\_Scripts\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\_Scripts\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\_Scripts\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\ClickHandle.cs" />
     <Compile Include="Assets\MagicEffects\Scripts\MagicBeamScript.cs" />
     <Compile Include="Assets\MagicEffects\Scripts\MagicButtonScript.cs" />
     <Compile Include="Assets\MagicEffects\Scripts\MagicDragMouseOrbit.cs" />
@@ -388,6 +390,9 @@
     <Compile Include="Assets\MagicEffects\Scripts\MagicLoopScript.cs" />
     <Compile Include="Assets\MagicEffects\Scripts\MagicProjectileScript.cs" />
     <Compile Include="Assets\MagicEffects\Scripts\MagicRotation.cs" />
+    <Compile Include="Assets\PotionMasterSpeechControll.cs" />
+    <Compile Include="Assets\RPGTALK\Demo\Scripts\DemoScript.cs" />
+    <Compile Include="Assets\RPGTALK\RPGTalk.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Characters\Orcs\models\textures\ColorCoded\Color Coding readme.txt" />
@@ -395,6 +400,9 @@
     <None Include="Assets\Enviroment\ToonForest\materials\TerrainMasked.shader" />
     <None Include="Assets\Enviroment\ToonForest\materials\TerrainShader2Diff.shader" />
     <None Include="Assets\MagicEffects\MagicArsenal - ReadMe.txt" />
+    <None Include="Assets\RPGTALK\Demo\Talks\DemosText.txt" />
+    <None Include="Assets\RPGTALK\PotionMasterSpeak.txt" />
+    <None Include="Assets\RPGTALK\ReadMe.txt" />
     <None Include="Assets\UI\Fonts\OpenSans\License!.txt" />
     <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug Bitangents.shader" />
     <None Include="Assets\_Frameworks\ProceduralToolkit\Shaders\Debug\Debug Normals.shader" />
