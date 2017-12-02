@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 114902429251910366}
   - component: {fileID: 114859347905924162}
   m_Layer: 9
-  m_Name: UD_Archer_B
+  m_Name: UD_archer_B
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

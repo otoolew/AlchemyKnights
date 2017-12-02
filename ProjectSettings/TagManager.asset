@@ -5,9 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Destructible
   - PlayerStats
-  - WayPoint
+  - Destructible
   layers:
   - Default
   - TransparentFX
@@ -17,14 +16,9 @@ TagManager:
   - UI
   - 
   - 
-  - Terrain
-<<<<<<< HEAD
-  - Clickable
   - 
-=======
-  - Enemy
-  - Projectile
->>>>>>> RangedEnemy
+  - 
+  - 
   - 
   - 
   - 
