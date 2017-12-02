@@ -13,7 +13,7 @@ public class Hit : EnemyBaseFSM
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         navAgent.SetDestination(enemy.transform.position);
-        Debug.Log(enemy.name + " Hit State");
+        //Debug.Log(enemy.name + " Hit State");
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

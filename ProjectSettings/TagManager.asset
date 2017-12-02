@@ -18,8 +18,13 @@ TagManager:
   - 
   - 
   - Terrain
+<<<<<<< HEAD
   - Clickable
   - 
+=======
+  - Enemy
+  - Projectile
+>>>>>>> RangedEnemy
   - 
   - 
   - 
