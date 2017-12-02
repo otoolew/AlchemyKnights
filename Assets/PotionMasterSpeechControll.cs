@@ -40,9 +40,10 @@ public class PotionMasterSpeechControll : MonoBehaviour, IPointerClickHandler
     //Just need to find a way to call the correct set of lines based off of the players accomplishments
     public void Speak()
     {
-        TakeAwayControls();
+        
         if(speakingDistance > Vector3.Distance(other.position, transform.position))
         {
+            TakeAwayControls();
             if (false)  //if complete statue
             {
                 rpgTalk.lineToStart = 20;
