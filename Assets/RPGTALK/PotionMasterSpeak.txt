@@ -8,3 +8,13 @@ Potion Master: Take these potions and book. The potions will help you in your ba
 Potion Master: If you don't know what a potion does look it up in the book by clicking the book icon in the top right of your screen.
 Potion Master: Be careful, each potion has negative side affects if they are misused.
 Potion Master: Good luck in the dungeons! Please bring back our statue!
+
+Potion Master: Wow! You got a piece of the statue back!
+Potion Master: The next piece is deeper in their dungeon with even more Goblins. 
+Potion Master: Sometimes it is beneficial to change which spell you can cast by rolling the scroll wheel on your mouse!
+Potion Master: Go get the next piece! You can do it!
+
+Potion Master: You recovered the second piece!?! You are surely powerful.
+Potion Master: At this point you know what you are doing. Get ready for the biggest fight yet and go get them!
+
+Potion Master: You did it! Thanks to you our town has it beloved statue back! Thank you!
