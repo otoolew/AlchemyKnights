@@ -6,50 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class ChangeSceneOnEnter : MonoBehaviour {
 
-    public string tag = "Player";
-    public string nextScene = "";
+    public string tagTrigger = "Player";
+    public string scenetoLoad = "";
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == tag)
-        {
-            //Call Change scene
-            print("Trigger Entered");
-            loadScene();
-        }
+        if (other.tag == tagTrigger)
+            SceneManager.LoadScene(scenetoLoad);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == tag)
-        {
-            //call Change scene
-            //print("Collision");
-            loadScene();
-        }
-    }
-
-    private void loadScene()
-    {
-        if (Application.isEditor)
-        {
-            loadEditorScene();
-        }
-        else
-        {
-            if (nextScene != "")
-            {
-                SceneManager.LoadScene(nextScene, LoadSceneMode.Single);
-            }
-            else
-            { /*If no next scene then do nothing*/
-                print("No Scene to Load");
-            }
-        }
-    }
-
-    private void loadEditorScene()
-    {
-        print("Loading scenes is not supported while in editor.");
+        if(collision.collider.tag == tagTrigger)
+            SceneManager.LoadScene(scenetoLoad);       
     }
 }
