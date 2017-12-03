@@ -29,10 +29,10 @@ public class Billboard : MonoBehaviour {
 
 
         //create a temporary vector3 that contains the x, y, and z position where this object should be looking at
-        Vector3 tempV = setPointToLookAt();
+        Vector3 tempV = SetPointToLookAt();
 
         //set a world up
-        Vector3 upwardDirection = setUpwardsDirection();
+        Vector3 upwardDirection = SetUpwardsDirection();
 
         //make this object look at the object that needs to be tracked
         transform.LookAt(tempV, upwardDirection);
@@ -47,7 +47,7 @@ public class Billboard : MonoBehaviour {
 
     //designer can choose if this object tracks certain axis of the other object.  This function takes
     //those choices into account (trackX, trackY, trackZ) and returns a vector3 point for this object to look at
-    private Vector3 setPointToLookAt()
+    private Vector3 SetPointToLookAt()
     {
         float xPosition;
         float yPosition;
@@ -91,7 +91,7 @@ public class Billboard : MonoBehaviour {
 
     //This function looks at the public enumerated variable worldUp and 
     //returns a unit vector based off of the value of worldUp
-    private Vector3 setUpwardsDirection()
+    private Vector3 SetUpwardsDirection()
     {
         //just in case, set upwardsDirection to be the standard up
         Vector3 upwardsDirection = Vector3.up;
