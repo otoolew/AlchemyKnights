@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 114022449438947024}
   - component: {fileID: 114243470204428508}
   m_Layer: 9
-  m_Name: UD_heavy_infantry_A
+  m_Name: UD_Heavy_Infantry_A
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1488,8 +1488,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89d02af026a83ed4ab3ba2cddc4475b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collidesWithTags: []
-  capsuleCollider: {fileID: 0}
+  collidesWithTags:
+  - Player
+  capsuleCollider: {fileID: 136651485325655710}
 --- !u!136 &136651485325655710
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1497,7 +1498,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150168}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.15
   m_Height: 0.5
