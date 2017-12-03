@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class BlindStatusEffect : MonoBehaviour {
     public Image image;
-
+    public void Start()
+    {
+        CureBlind();
+    }
     // Update is called once per frame
     void Update()
     {

@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 114421636037622092}
   - component: {fileID: 114549020911999936}
   m_Layer: 9
-  m_Name: Orc_archer
+  m_Name: Orc_Archer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2296,7 +2296,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1231710285749586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 482314}
@@ -2333,7 +2333,7 @@ MonoBehaviour:
   attackSpeed: 1
   firePoint: {fileID: 4012804340717762}
   projectile: {fileID: 1531292979692302, guid: 91637a5a6a2268a4d9ae2e819ded6ddb, type: 2}
-  launchForce: 0
+  launchForce: 20
   attackRange: 0
   attackCoolDown: 1
 --- !u!136 &136983522089202686

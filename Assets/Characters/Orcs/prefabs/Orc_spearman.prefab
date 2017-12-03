@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 114508705695079816}
   - component: {fileID: 114949383341468812}
   m_Layer: 9
-  m_Name: Orc_spearman
+  m_Name: Orc_Spearman
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1884,7 +1884,7 @@ Animator:
   m_GameObject: {fileID: 125660}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 617c47f9a5d2a0a4badca0ab63cdde03, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1960,7 +1960,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185490}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.11
   m_Height: 0.51
