@@ -8,6 +8,7 @@ TagManager:
   - PlayerStats
   - Destructible
   - WayPoint
+  - Spawner
   layers:
   - Default
   - TransparentFX
