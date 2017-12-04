@@ -20,7 +20,7 @@ public class HitBox3D : MonoBehaviour {
                 randomRoll = Random.Range(0, 3);
                 if (Random.Range(0, 3) == 2)
                 {
-                    Debug.Log(Random.Range(0, 3));
+                    //Debug.Log(Random.Range(0, 3));
                     
                     switch (statusInflicted)
                     {
@@ -35,7 +35,7 @@ public class HitBox3D : MonoBehaviour {
                             
                             break;
                     }
-                    Debug.Log("Status");
+                    //Debug.Log("Status");
                 }
 
             }

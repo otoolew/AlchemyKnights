@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 114296567457728504}
   - component: {fileID: 114486193409918560}
   m_Layer: 0
-  m_Name: AlchemyKnight_Go
+  m_Name: AlchemyKnight_GO
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
