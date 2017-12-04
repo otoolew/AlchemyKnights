@@ -21,7 +21,6 @@ public class PlayerHealth : MonoBehaviour {
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
 
     public ParticleSystem healingParticles;
-    public UnityEvent OnDeath;
 
     void Start()
     {
@@ -89,7 +88,8 @@ public class PlayerHealth : MonoBehaviour {
         playerController.enabled = false;
         playerAbility.enabled = false;
         animator.SetTrigger("Death");
-        OnDeath.Invoke();
+        //GameObject.FindGameObjectWithTag("MainMenu").GetComponent<DeathOptions>().
+        GameObject.FindObjectOfType<DeathOptions>().DoDeath();
     }
 
 }

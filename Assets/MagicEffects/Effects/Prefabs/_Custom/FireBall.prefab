@@ -816,8 +816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c62e700bfcef254d8013bf80a8dd0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileType: 0
-  damage: 25
+  projectileType: 1
+  damage: 50
   blastRadius: 5
   projectileParticle: {fileID: 1285508182951428}
   muzzleParticle: {fileID: 1486135343199670}

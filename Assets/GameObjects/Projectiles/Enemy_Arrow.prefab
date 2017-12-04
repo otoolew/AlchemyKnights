@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa4e61f62765b14dba41a412596d0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   projectileParticle: {fileID: 1548536273117842, guid: 7fcb38448ea12f140a37b349b5b98bb7,
     type: 2}
   collidesWithTags:

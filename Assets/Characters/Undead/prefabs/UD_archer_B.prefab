@@ -400,7 +400,6 @@ GameObject:
   - component: {fileID: 95141846473611096}
   - component: {fileID: 195893646535964344}
   - component: {fileID: 136443460181490418}
-  - component: {fileID: 114707406896654316}
   - component: {fileID: 114705978138487850}
   m_Layer: 0
   m_Name: UD_Archer_B
@@ -1108,28 +1107,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackType: 1
-  healthPoints: 100
+  healthPoints: 50
   attackSpeed: 1
   firePoint: {fileID: 4015251535556796}
   projectile: {fileID: 1531292979692302, guid: 91637a5a6a2268a4d9ae2e819ded6ddb, type: 2}
   launchForce: 20
   attackRange: 0
   attackCoolDown: 1
---- !u!114 &114707406896654316
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1702104268373554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5956d8d89f68f645912cc0a0cb8cd94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 100
-  sinkSpeed: 0.5
-  scoreValue: 10
 --- !u!136 &136443460181490418
 CapsuleCollider:
   m_ObjectHideFlags: 1
