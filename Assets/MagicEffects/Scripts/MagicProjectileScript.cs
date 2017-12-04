@@ -82,7 +82,7 @@ public class MagicProjectileScript : MonoBehaviour
         {
             if (hitColliders[i].gameObject.tag == "Enemy") // Projectile will destroy objects tagged as Destructible
             {
-                Debug.Log("Blast Hit " + hitColliders[i].gameObject.name);
+                //Debug.Log("Blast Hit " + hitColliders[i].gameObject.name + " "+ damage);
                 hitColliders[i].gameObject.GetComponent<EnemyAI>().TakeDamage(damage);
             }
             i++;

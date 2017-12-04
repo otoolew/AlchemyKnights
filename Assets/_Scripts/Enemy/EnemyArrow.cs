@@ -6,7 +6,6 @@ public class EnemyArrow : MonoBehaviour {
     public int damage = 10;
     //public GameObject impactParticle;
     public GameObject projectileParticle;
-    private bool hasCollided = false;
     public List<string> collidesWithTags = new List<string>();
     public CapsuleCollider capsuleCollider;
 

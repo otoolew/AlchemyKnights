@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 114508705695079816}
   - component: {fileID: 114949383341468812}
   m_Layer: 9
-  m_Name: Orc_Spearman
+  m_Name: Orc_spearman
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1906,6 +1906,9 @@ MonoBehaviour:
   collidesWithTags:
   - Player
   capsuleCollider: {fileID: 136387547045452542}
+  randomRoll: 0
+  statusInflicted: 
+  damage: 0
 --- !u!114 &114508705695079816
 MonoBehaviour:
   m_ObjectHideFlags: 1

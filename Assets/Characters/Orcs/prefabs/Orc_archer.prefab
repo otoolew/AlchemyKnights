@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 114421636037622092}
   - component: {fileID: 114549020911999936}
   m_Layer: 9
-  m_Name: Orc_Archer
+  m_Name: Orc_archer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

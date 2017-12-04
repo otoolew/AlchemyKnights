@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 136761538521240404}
   - component: {fileID: 114074841630884676}
   m_Layer: 9
-  m_Name: UD_Light_Infantry_A
+  m_Name: UD_light_infantry_A
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

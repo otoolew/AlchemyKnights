@@ -58,19 +58,19 @@ public class ToxicManager : MonoBehaviour
         switch (slot)
         {
             case 0:
-                Debug.Log("Took Red Potion");
+                //Debug.Log("Took Red Potion");
                 UpdateSlider(slot);
                 break;
             case 1:
-                Debug.Log("Took Blue Potion");
+                //Debug.Log("Took Blue Potion");
                 UpdateSlider(slot);
                 break;
             case 2:
-                Debug.Log("Took Green Potion");
+                //Debug.Log("Took Green Potion");
                 UpdateSlider(slot);
                 break;
             case 3:
-                Debug.Log("Took Yellow Potion");
+                //Debug.Log("Took Yellow Potion");
                 UpdateSlider(slot);
                 break;
             default:

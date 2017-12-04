@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 136290238925065322}
   - component: {fileID: 114563382468221432}
   m_Layer: 9
-  m_Name: UD_Heavy_Infantry_B
+  m_Name: UD_heavy_infantry_B
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1462,8 +1462,8 @@ MonoBehaviour:
   - Player
   capsuleCollider: {fileID: 136089888488753010}
   randomRoll: 0
-  statusInflicted: Poison
-  damage: 10
+  statusInflicted: 
+  damage: 0
 --- !u!114 &114563382468221432
 MonoBehaviour:
   m_ObjectHideFlags: 1

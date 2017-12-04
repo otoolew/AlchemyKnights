@@ -32,7 +32,7 @@ public class SlowDebuff : MonoBehaviour {
         }
         else
         {
-            Debug.Log("Already Active");
+            //Debug.Log("Already Active");
         }
 
     }

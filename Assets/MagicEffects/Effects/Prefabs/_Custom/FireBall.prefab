@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4095834840901632}
   - component: {fileID: 198105738747578220}
   - component: {fileID: 199432190537144458}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireAfterEmbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4444677836178592}
   - component: {fileID: 198081337048756802}
   - component: {fileID: 199332507628725206}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireRockDebrisSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4405829722762696}
   - component: {fileID: 82303339491475898}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireProjectileNormal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 4028721207261536}
   - component: {fileID: 198110486431633078}
   - component: {fileID: 199212165495130558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4622718580181118}
   - component: {fileID: 108117420736719882}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,10 +103,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4790038112952060}
   - component: {fileID: 33415166806791128}
-  - component: {fileID: 135759011079863730}
   - component: {fileID: 54799276597255568}
-  - component: {fileID: 114187156919067964}
-  m_Layer: 0
+  - component: {fileID: 135759011079863730}
+  - component: {fileID: 114255983733673006}
+  m_Layer: 10
   m_Name: FireBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4600052932446476}
   - component: {fileID: 198793359899992556}
   - component: {fileID: 199458499744968408}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4038100383164678}
   - component: {fileID: 198941797780107888}
   - component: {fileID: 199920916283821048}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireMuzzleNormal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 4028473618339882}
   - component: {fileID: 108014843539089132}
   - component: {fileID: 114151930563698232}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 4240174074929724}
   - component: {fileID: 198241921908289568}
   - component: {fileID: 199537167052215832}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireRockDebris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4705791456121642}
   - component: {fileID: 198563775322023908}
   - component: {fileID: 199004328225266562}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 4806462501005908}
   - component: {fileID: 198961021431659492}
   - component: {fileID: 199190298375701398}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TrailFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 82103792071872046}
   - component: {fileID: 199502970704472970}
   - component: {fileID: 198234030449433538}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireImpactNormal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 4424227188766512}
   - component: {fileID: 198814833178075782}
   - component: {fileID: 199886069314062048}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 4290527076905872}
   - component: {fileID: 198425305994545358}
   - component: {fileID: 199528231821752472}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TrailSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 4835783792804252}
   - component: {fileID: 198076199807479628}
   - component: {fileID: 199394050641041938}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 4679657466896724}
   - component: {fileID: 198399160142273180}
   - component: {fileID: 199896298447344556}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TrailEmber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0.2
   killAfterLife: 1
---- !u!114 &114187156919067964
+--- !u!114 &114255983733673006
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -813,15 +813,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1479211964224876}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c62e700bfcef254d8013bf80a8dd0b3, type: 3}
+  m_Script: {fileID: 11500000, guid: c49efb715a1395643b158a8846980bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectileType: 1
   damage: 50
-  blastRadius: 5
-  projectileParticle: {fileID: 1285508182951428}
-  muzzleParticle: {fileID: 1486135343199670}
-  impactParticle: {fileID: 1789774115359030}
+  impactParticle: {fileID: 100010, guid: 87698b9d467306440a17655d9c528f3a, type: 2}
+  projectileParticle: {fileID: 100010, guid: b32f835e658efa1419ad0ae6b033b81f, type: 2}
+  muzzleParticle: {fileID: 104278, guid: aa93d6fd1636c314db42f1758e084bfa, type: 2}
+  trailParticles: []
+  impactNormal: {x: 0, y: 0, z: 0}
+  blastRadius: 10
 --- !u!135 &135759011079863730
 SphereCollider:
   m_ObjectHideFlags: 1
