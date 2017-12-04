@@ -24,6 +24,11 @@ public class Billboard : MonoBehaviour {
     public enum WorldUp {up, down, left, right, forward, back};
     [Header("World Up Direction:")]
     public WorldUp worldUp;
+
+    private void Start()
+    {
+        objectToTrack = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void Update()
     {
 

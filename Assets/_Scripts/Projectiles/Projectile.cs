@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour {
     public ProjectileType projectileType;
-    public int damage = 10;
+    public int damage = 50;
     public GameObject impactParticle;
     public GameObject projectileParticle;
     public GameObject muzzleParticle;

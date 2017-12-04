@@ -6,7 +6,7 @@ public class ProjectileBehavior : MonoBehaviour {
     public ProjectileType projectileType;
     private SphereCollider sphereCollider;
     private EnemyHealth enemyHealth;
-    public int damage = 0;
+    public int damage;
     public float blastRadius;
     public GameObject projectileParticle;
     public GameObject muzzleParticle;

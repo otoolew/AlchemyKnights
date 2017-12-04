@@ -76,7 +76,6 @@ GameObject:
   - component: {fileID: 136349045948381254}
   - component: {fileID: 195059934242392110}
   - component: {fileID: 136290238925065322}
-  - component: {fileID: 114705597787842306}
   - component: {fileID: 114563382468221432}
   m_Layer: 9
   m_Name: UD_Heavy_Infantry_B
@@ -1462,6 +1461,9 @@ MonoBehaviour:
   collidesWithTags:
   - Player
   capsuleCollider: {fileID: 136089888488753010}
+  randomRoll: 0
+  statusInflicted: Poison
+  damage: 10
 --- !u!114 &114563382468221432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1481,21 +1483,6 @@ MonoBehaviour:
   launchForce: 0
   attackRange: 0
   attackCoolDown: 1
---- !u!114 &114705597787842306
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5956d8d89f68f645912cc0a0cb8cd94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 100
-  sinkSpeed: 0.5
-  scoreValue: 10
 --- !u!136 &136089888488753010
 CapsuleCollider:
   m_ObjectHideFlags: 1
