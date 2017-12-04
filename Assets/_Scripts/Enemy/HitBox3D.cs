@@ -7,7 +7,7 @@ public class HitBox3D : MonoBehaviour {
 
     public List<string> collidesWithTags = new List<string>();
     public CapsuleCollider capsuleCollider;
-
+    public float statusChance;
     void OnTriggerEnter(Collider col)
     {
         for (int i = 0; i < collidesWithTags.Count; i++)
@@ -15,7 +15,16 @@ public class HitBox3D : MonoBehaviour {
             if (col.gameObject.tag == collidesWithTags[i])
             {
                 col.gameObject.GetComponent<PlayerHealth>().TakeDamage(10);
+                if(Random.Range(0, 3) == 2)
+                {
+                    Debug.Log("Status");
+                }
+
             }
         }     
+    }
+    public void DisableHitBox()
+    {
+
     }
 }

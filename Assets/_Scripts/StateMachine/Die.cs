@@ -11,6 +11,7 @@ public class Die : EnemyBaseFSM {
         //enemy.SetActive(false);
         enemy.GetComponent<CapsuleCollider>().enabled = false;
         enemy.GetComponent<NavMeshAgent>().enabled = false;
+        Destroy(enemy, 2f);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
