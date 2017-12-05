@@ -30,6 +30,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.L)){
+            FindObjectOfType<GameData>().IncrementPlayerLevel();
+            FindObjectOfType<GameData>().DebugGameData();
+        }
+   
         if (navAgent.isActiveAndEnabled)
         {
             if (Input.GetMouseButton(0))
