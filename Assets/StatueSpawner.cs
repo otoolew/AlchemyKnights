@@ -8,25 +8,26 @@ public class StatueSpawner : MonoBehaviour {
     public GameObject noWingsNoShield;
     public GameObject noWings;
     public GameObject fullStatue;
-
+    public int playerProgress;
 	// Use this for initialization
 	void Start () {
+        playerProgress = FindObjectOfType<GameData>().GetPlayerLevel();
         //waiting for game manager to properly implement these if statements.
-        if (false)  //if full statue
+        if (playerProgress == 3)  //if full statue
         {
             podium.SetActive(false);
             noWingsNoShield.SetActive(false);
             noWings.SetActive(false);
             fullStatue.SetActive(true);
 
-        }else if (false)    //if statue with no wings
+        }else if (playerProgress == 2)    //if statue with no wings
         {
             podium.SetActive(false);
             noWingsNoShield.SetActive(false);
             noWings.SetActive(true);
             fullStatue.SetActive(false);
         }
-        else if (false)     //if statue with no wings and no shield
+        else if (playerProgress == 1)     //if statue with no wings and no shield
         {
             podium.SetActive(false);
             noWingsNoShield.SetActive(true);

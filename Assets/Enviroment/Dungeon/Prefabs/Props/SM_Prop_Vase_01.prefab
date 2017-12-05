@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 426902}
   - component: {fileID: 3363694}
   - component: {fileID: 2361306}
+  - component: {fileID: 136255663527061416}
   m_Layer: 0
   m_Name: SM_Prop_Vase_01
   m_TagString: Untagged
@@ -82,3 +83,16 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 126132}
   m_IsPrefabParent: 1
+--- !u!136 &136255663527061416
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126132}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3203435
+  m_Height: 0.80379593
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.40189797, z: -0.0000019073486}

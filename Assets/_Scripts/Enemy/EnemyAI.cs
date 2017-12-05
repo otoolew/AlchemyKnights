@@ -16,6 +16,8 @@ public class EnemyAI : MonoBehaviour {
     public float attackRange;
     public float attackCoolDown = 1f;
     private float timer = 0f;
+    public bool dead;
+    public bool isBoss;
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
@@ -35,7 +37,16 @@ public class EnemyAI : MonoBehaviour {
             anim.SetBool("AttackRange", false);
 
         if (healthPoints <= 0)
+        {           
             anim.SetTrigger("Die");
+            if (isBoss)
+            {
+                DropLoot dropLoot = GetComponent<DropLoot>();
+                dropLoot.Drop();
+                dropLoot.dropped = true;
+            }
+            
+        }                   
 	}
     public GameObject GetPlayer()
     {
@@ -60,7 +71,6 @@ public class EnemyAI : MonoBehaviour {
                 GameObject projectileInstance = Instantiate(projectile, firePoint.position, firePoint.rotation);
                 projectileInstance.GetComponent<Rigidbody>().velocity = launchForce * firePoint.forward;
             }
-
         }
         timer = 0;
     }
