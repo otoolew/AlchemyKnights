@@ -113,7 +113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1859428592080818
 GameObject:
   m_ObjectHideFlags: 1
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 0
+  m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 565fd263440bd45fa9ba0925c60f54f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startOnAwake: 0
+  startOnAwake: 1
   showWithDialog:
   - {fileID: 1825599767630816}
   textUI: {fileID: 114740971136465674}
@@ -293,20 +293,26 @@ MonoBehaviour:
   billboard: 1
   mainCamera: 1
   otherCamera: {fileID: 0}
-  txtToParse: {fileID: 4900000, guid: 700ee2117ce9aa3499593ccfc8f17300, type: 3}
+  txtToParse: {fileID: 4900000, guid: 6a11b6497ec764431a12e4bbe117d551, type: 3}
   enableQuickSkip: 1
   callbackScript: {fileID: 0}
   callbackFunction: GiveBackControls
-  animatorWhenTalking: {fileID: 0}
+  animatorWhenTalking: {fileID: 95534910254513678}
   animatorBooleanName: talking
   animatorIntName: talker
   textSpeed: 50
   blinkWhenReady: {fileID: 1990211007094180}
-  variables: []
+  variables:
+  - variableName: '*PlayerName*'
+    variableValue: 
   shouldUsePhotos: 1
   photos:
-  - name: Potion Master
-    photo: {fileID: 21300000, guid: 505aad8b9488f854e90af318e4bbea6a, type: 3}
+  - name: '*PlayerName*'
+    photo: {fileID: 21300002, guid: 29abebc8e9c7048819f3d2245a2a92be, type: 3}
+  - name: FunnyGuy
+    photo: {fileID: 21300004, guid: 29abebc8e9c7048819f3d2245a2a92be, type: 3}
+  - name: Girl
+    photo: {fileID: 21300000, guid: 29abebc8e9c7048819f3d2245a2a92be, type: 3}
   UIPhoto: {fileID: 114205621456420166}
   shouldStayOnScreen: 0
   textAudio: {fileID: 8300000, guid: 49c855462770641229c932e59dd505e5, type: 3}
@@ -490,7 +496,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

@@ -77,7 +77,7 @@ public class RPGTalk : MonoBehaviour {
 	
 	[Tooltip("Speed of the text, in characters per second")]
 	public float textSpeed = 50.0f;
-	//which character are we?
+	//wich character are we?
 	private float currentChar = 0.0f;
 
 	//a list with every element of the cutscene
