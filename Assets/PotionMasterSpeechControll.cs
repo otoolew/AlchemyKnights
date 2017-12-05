@@ -14,9 +14,14 @@ public class PotionMasterSpeechControll : MonoBehaviour, IPointerClickHandler
     public Transform other;
     public float speakingDistance = 10.0f;
 
+    public int playerProgress;
 
+    void Start()
+    {
+        playerProgress = FindObjectOfType<GameData>().GetPlayerLevel();
+    }
 
-    public void OnPointerClick(PointerEventData evd)
+        public void OnPointerClick(PointerEventData evd)
     {
         Speak();
     }
@@ -44,21 +49,21 @@ public class PotionMasterSpeechControll : MonoBehaviour, IPointerClickHandler
         if(speakingDistance > Vector3.Distance(other.position, transform.position))
         {
             TakeAwayControls();
-            if (false)  //if complete statue
+            if (playerProgress == 3)  //if complete statue
             {
                 rpgTalk.lineToStart = 20;
-                rpgTalk.lineToBreak = 20;
+                rpgTalk.lineToBreak = 21;
                 rpgTalk.callbackFunction = "GiveBackControls";
                 rpgTalk.NewTalk();
             }
-            else if (false)//if 2 pieces of statue recovered
+            else if (playerProgress == 2)//if 2 pieces of statue recovered
             {
                 rpgTalk.lineToStart = 17;
                 rpgTalk.lineToBreak = 18;
                 rpgTalk.callbackFunction = "GiveBackControls";
                 rpgTalk.NewTalk();
             }
-            else if (false)//if 1 piece of statue recovered
+            else if (playerProgress == 1)//if 1 piece of statue recovered
             {
                 rpgTalk.lineToStart = 12;
                 rpgTalk.lineToBreak = 15;
@@ -67,7 +72,7 @@ public class PotionMasterSpeechControll : MonoBehaviour, IPointerClickHandler
             }
             else   //if no pieces of statue recovered
             {
-                rpgTalk.lineToStart = 6;
+                rpgTalk.lineToStart = 5;
                 rpgTalk.lineToBreak = 10;
                 rpgTalk.callbackFunction = "GiveBackControls";
                 rpgTalk.NewTalk();
