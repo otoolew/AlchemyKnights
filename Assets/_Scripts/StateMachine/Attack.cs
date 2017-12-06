@@ -17,7 +17,7 @@ public class Attack : EnemyBaseFSM {
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemy.transform.LookAt(player.transform.position);
+        //enemy.transform.LookAt(player.transform.position);
         enemy.GetComponent<EnemyAI>().Attack();
         //Debug.Log(enemy.name + " Attack State : Attacking " + player.name);
     }

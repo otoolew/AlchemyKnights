@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DropLoot : MonoBehaviour {
     public GameObject itemDropPrefab;
+    public Transform dropPoint;
     public bool dropped = false;
 
     public void Drop()
@@ -11,7 +12,7 @@ public class DropLoot : MonoBehaviour {
         if(dropped == false)
         {
             dropped = true;
-            itemDropPrefab = Instantiate(itemDropPrefab, gameObject.transform.position, gameObject.transform.rotation);
+            itemDropPrefab = Instantiate(itemDropPrefab, dropPoint.transform.position, dropPoint.transform.rotation);
         } 
     }
 }
