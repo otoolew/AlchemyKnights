@@ -823,7 +823,7 @@ MonoBehaviour:
   muzzleParticle: {fileID: 104278, guid: aa93d6fd1636c314db42f1758e084bfa, type: 2}
   trailParticles: []
   impactNormal: {x: 0, y: 0, z: 0}
-  blastRadius: 10
+  blastRadius: 5
 --- !u!135 &135759011079863730
 SphereCollider:
   m_ObjectHideFlags: 1
