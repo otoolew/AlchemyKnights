@@ -1,28 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TimedStatusEffect : MonoBehaviour {
-
     public float duration; // when it should expire?
     public float startTime; // should delay the (first) effect tick?
     public float repeatTime; // how much time between each effect tick?
-    public string curedBy;
     [HideInInspector]
     public PlayerHealth playerHealth;
-    void Start()
+    [HideInInspector]
+    public NavMeshAgent navAgent;
+    void OnEnable()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        navAgent = GetComponentInParent<NavMeshAgent>();
+        playerHealth = GetComponentInParent<PlayerHealth>();
         // Apply the effect repeated over time or direct?
-
+        if (repeatTime > 0)
+            InvokeRepeating("ApplyEffect", startTime, repeatTime);
+        else
+            Invoke("ApplyEffect", startTime);
+        // End the effect accordingly to the duration
+        Invoke("EndEffect", duration);
     }
 
-    protected virtual void ApplyEffect()
+    public virtual void ApplyEffect()
     {
     }
-    protected virtual void EndEffect()
+
+    public virtual void EndEffect()
     {
         CancelInvoke();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
+

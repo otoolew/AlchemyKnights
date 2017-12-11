@@ -6,7 +6,7 @@ public class HealOverTIme : TimedStatusEffect
 {
 
     public int amount;
-    protected override void ApplyEffect()
+    public override void ApplyEffect()
     {
         //playerHealth.HealDamage(amount);
     }

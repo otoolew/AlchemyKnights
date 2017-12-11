@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 430504}
   - component: {fileID: 3303918}
   - component: {fileID: 2342312}
+  - component: {fileID: 136089888488753010}
+  - component: {fileID: 114376300966933878}
   m_Layer: 9
   m_Name: weapon_sword_A
   m_TagString: Untagged
@@ -71,9 +73,10 @@ GameObject:
   m_Component:
   - component: {fileID: 415762}
   - component: {fileID: 9561698}
-  - component: {fileID: 54894578079005628}
   - component: {fileID: 136349045948381254}
   - component: {fileID: 195059934242392110}
+  - component: {fileID: 136290238925065322}
+  - component: {fileID: 114563382468221432}
   m_Layer: 9
   m_Name: UD_heavy_infantry_B
   m_TagString: Enemy
@@ -684,8 +687,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115004}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.13, y: -2.2011392, z: -9.871501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 414296}
@@ -694,6 +697,7 @@ Transform:
   - {fileID: 488108}
   - {fileID: 480584}
   - {fileID: 470144}
+  - {fileID: 4560675247125112}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1119,7 +1123,7 @@ Animator:
   m_GameObject: {fileID: 115004}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1851e3e6c3e77d648a0cc1ef90d895fa, type: 3}
-  m_Controller: {fileID: 9100000, guid: dace59d5ca205ae4987b2dc608e26bb4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 318b1841546aef34b95a9c9ce28920e1, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1415,21 +1419,96 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 115004}
   m_IsPrefabParent: 1
---- !u!54 &54894578079005628
-Rigidbody:
+--- !u!1 &1937055844419958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4560675247125112}
+  m_Layer: 9
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4560675247125112
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1937055844419958}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 415762}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114376300966933878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d02af026a83ed4ab3ba2cddc4475b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collidesWithTags:
+  - Player
+  capsuleCollider: {fileID: 136089888488753010}
+  randomRoll: 0
+  statusInflicted: 
+  damage: 0
+--- !u!114 &114563382468221432
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115004}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: Infinity
-  m_AngularDrag: Infinity
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afe5fab3fc3319f4a8705bf9a94fc8dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackType: 0
+  healthPoints: 100
+  attackSpeed: 1
+  firePoint: {fileID: 4560675247125112}
+  projectile: {fileID: 1531292979692302, guid: 91637a5a6a2268a4d9ae2e819ded6ddb, type: 2}
+  launchForce: 0
+  attackRange: 0
+  attackCoolDown: 1
+--- !u!136 &136089888488753010
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: -0.005969601, y: -0.000000069169005, z: 0.28784612}
+--- !u!136 &136290238925065322
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.65
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!136 &136349045948381254
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1456,7 +1535,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

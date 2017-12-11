@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 public class BlindStatusEffect : MonoBehaviour {
     public Image image;
-    // Use this for initialization
-    void Start()
+    public void Start()
     {
-
-
+        CureBlind();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -19,11 +16,6 @@ public class BlindStatusEffect : MonoBehaviour {
         {
             Debug.Log("B");
             ApplyBlind();
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Debug.Log("C");
-            CureBlind();
         }
     }
     public void ApplyBlind()
