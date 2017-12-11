@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 136443460181490418}
   - component: {fileID: 114705978138487850}
   m_Layer: 0
-  m_Name: UD_Archer_B
+  m_Name: UD_archer_B
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

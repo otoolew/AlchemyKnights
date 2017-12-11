@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 136368863368626360}
   - component: {fileID: 114901469154090994}
   m_Layer: 9
-  m_Name: UD_Spearman_B
+  m_Name: UD_spearman_B
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
