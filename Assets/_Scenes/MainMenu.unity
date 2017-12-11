@@ -13419,12 +13419,12 @@ Prefab:
     - target: {fileID: 224768373799849768, guid: 4935f2d4a3ad5b04fa381568af00da47,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 392
+      value: 409.5
       objectReference: {fileID: 0}
     - target: {fileID: 224768373799849768, guid: 4935f2d4a3ad5b04fa381568af00da47,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 235.5
+      value: 264.5
       objectReference: {fileID: 0}
     - target: {fileID: 224768373799849768, guid: 4935f2d4a3ad5b04fa381568af00da47,
         type: 2}
@@ -39579,6 +39579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b823946da9d92cf45b268ae2c06d058f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerLevel: 0
 --- !u!114 &1654836590
 MonoBehaviour:
   m_ObjectHideFlags: 0
