@@ -32,7 +32,7 @@ public class DeathOptions : MonoBehaviour {
     }
     public void DoDeath()
     {
-        Debug.Log("Death Menu");
+        //Debug.Log("Death Menu");
         showPanels.ShowDeathPanel();
     }
 }

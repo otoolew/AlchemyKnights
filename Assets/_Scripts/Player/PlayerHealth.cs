@@ -84,11 +84,10 @@ public class PlayerHealth : MonoBehaviour {
 
     public void Death()
     {
-        Debug.Log("Player Died");
+        //Debug.Log("Player Died");
         playerController.enabled = false;
         playerAbility.enabled = false;
-        animator.SetTrigger("Death");
-        //GameObject.FindGameObjectWithTag("MainMenu").GetComponent<DeathOptions>().
+        animator.SetTrigger("Dead");
         GameObject.FindObjectOfType<DeathOptions>().DoDeath();
     }
 

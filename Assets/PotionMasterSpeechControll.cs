@@ -21,7 +21,7 @@ public class PotionMasterSpeechControll : MonoBehaviour, IPointerClickHandler
         playerProgress = FindObjectOfType<GameData>().GetPlayerLevel();
     }
 
-        public void OnPointerClick(PointerEventData evd)
+    public void OnPointerClick(PointerEventData evd)
     {
         Speak();
     }
@@ -45,8 +45,8 @@ public class PotionMasterSpeechControll : MonoBehaviour, IPointerClickHandler
     //Just need to find a way to call the correct set of lines based off of the players accomplishments
     public void Speak()
     {
-        
-        if(speakingDistance > Vector3.Distance(other.position, transform.position))
+
+        if (speakingDistance > Vector3.Distance(other.position, transform.position))
         {
             TakeAwayControls();
             if (playerProgress == 3)  //if complete statue
@@ -78,6 +78,6 @@ public class PotionMasterSpeechControll : MonoBehaviour, IPointerClickHandler
                 rpgTalk.NewTalk();
             }
         }
-        
+
     }
 }
