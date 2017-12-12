@@ -36,7 +36,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4802582119009738}
-  - component: {fileID: 120611133277716332}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -548,6 +547,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1219139568215314
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4432605455964314}
+  - component: {fileID: 120897525769135096}
+  m_Layer: 0
+  m_Name: Lightning Beam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1223713916435202
 GameObject:
   m_ObjectHideFlags: 1
@@ -944,6 +959,7 @@ GameObject:
   - component: {fileID: 114764437885743840}
   - component: {fileID: 114072855659006826}
   - component: {fileID: 114044532198855310}
+  - component: {fileID: 114918345490154326}
   m_Layer: 0
   m_Name: AlchemyKnight
   m_TagString: Player
@@ -2414,7 +2430,7 @@ Transform:
   - {fileID: 4503130925090962}
   - {fileID: 4468243593791856}
   m_Father: {fileID: 4373573969697748}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4058351133693208
 Transform:
@@ -2518,7 +2534,7 @@ Transform:
   - {fileID: 4929330020517882}
   - {fileID: 4625428649787446}
   m_Father: {fileID: 4373573969697748}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4123260699665764
 Transform:
@@ -2686,9 +2702,9 @@ Transform:
   - {fileID: 4985641451395764}
   - {fileID: 4776783362707260}
   - {fileID: 4802582119009738}
+  - {fileID: 224379761441655060}
   - {fileID: 4056118291787344}
   - {fileID: 4122194661962544}
-  - {fileID: 224379761441655060}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2758,6 +2774,19 @@ Transform:
   - {fileID: 4983336083409736}
   m_Father: {fileID: 4366482007899712}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4432605455964314
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219139568215314}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4802582119009738}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4468243593791856
 Transform:
@@ -3051,7 +3080,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4432605455964314}
   m_Father: {fileID: 4373573969697748}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6731,7 +6761,8 @@ MonoBehaviour:
   abilityList:
   - {fileID: 11400000, guid: 3cd6dc1c7bcb9cc48b908d5ed4a951c2, type: 2}
   - {fileID: 11400000, guid: f040a323427b31e40baea969d6873f8c, type: 2}
-  currentAbility: {fileID: 11400000, guid: f040a323427b31e40baea969d6873f8c, type: 2}
+  - {fileID: 11400000, guid: ddf73676b9d96d94d87662133bc059ad, type: 2}
+  currentAbility: {fileID: 11400000, guid: 3cd6dc1c7bcb9cc48b908d5ed4a951c2, type: 2}
   weaponHolder: {fileID: 1372971594303628}
 --- !u!114 &114765889391744216
 MonoBehaviour:
@@ -7174,6 +7205,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114918345490154326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1372971594303628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab1740fa32f653548a4381d045594305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityDamage: 1
+  abilityRange: 50
+  hitForce: 100
+  firePoint: {fileID: 4802582119009738}
+  laserAbility: {fileID: 120897525769135096}
 --- !u!114 &114922829798763580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7326,21 +7373,21 @@ MonoBehaviour:
   m_Text: 'ACTIVE INGEDIENTS HERE
 
 '
---- !u!120 &120611133277716332
+--- !u!120 &120897525769135096
 LineRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1016229164505288}
+  m_GameObject: {fileID: 1219139568215314}
   m_Enabled: 0
   m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 0
   m_MotionVectors: 0
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 5aa1452712c590049b777d685b688aae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7365,7 +7412,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 8
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -7375,9 +7422,15 @@ LineRenderer:
         inSlope: 0
         outSlope: 0
         tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-      m_RotationOrder: 4
+      m_RotationOrder: 0
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
@@ -7407,12 +7460,12 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 2
     numCapVertices: 0
     alignment: 0
     textureMode: 0
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
 --- !u!136 &136188173954956982
 CapsuleCollider:
@@ -25154,7 +25207,7 @@ RectTransform:
   - {fileID: 224175615694703248}
   - {fileID: 224945550880937192}
   m_Father: {fileID: 4373573969697748}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

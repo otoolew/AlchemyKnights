@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdb745e4dbea8f4699ebe0bb8646b91, type: 3}
   m_Name: Lightning
   m_EditorClassIdentifier: 
-  abilityName: New Ability
-  abilitySprite: {fileID: 0}
+  abilityName: Lightning
+  abilitySprite: {fileID: 21300000, guid: 7884e882e1003fe4f83c496fc063d9f5, type: 3}
   abilityBaseCoolDown: 1
   abilityDamage: 1
   abilityRange: 50
-  hitForce: 100
-  laserColor: {r: 1, g: 1, b: 1, a: 1}
+  hitForce: 0
+  laserColor: {r: 0, g: 0.17241383, b: 1, a: 1}

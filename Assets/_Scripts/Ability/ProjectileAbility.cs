@@ -5,7 +5,6 @@ using UnityEngine;
 public class ProjectileAbility : Ability {
     public float projectileForce = 250;
     public Rigidbody projectile;
-
     private ProjectileTrigger launcher;
 
     public override void InitializeAbility(GameObject obj)
@@ -13,6 +12,7 @@ public class ProjectileAbility : Ability {
         launcher = obj.GetComponent<ProjectileTrigger>();
         launcher.projectileForce = projectileForce;
         launcher.projectile = projectile;
+        abilityType = AbilityType.Projectile;
     }
 
     public override void TriggerAbility()

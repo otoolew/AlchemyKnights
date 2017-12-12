@@ -41,10 +41,26 @@ public class PlayerAbility : MonoBehaviour {
         if (coolDownComplete)
         {
             AbilityReady();
-            if (Input.GetButtonUp(abilityButtonAxisName))
+            switch (currentAbility.abilityType)
             {
-                ButtonTriggered();
+                case AbilityType.Projectile:
+                    if (Input.GetButtonUp(abilityButtonAxisName))
+                    {
+                        ButtonTriggered();
+                    }
+                    break;
+                case AbilityType.RayCast:
+                    if (Input.GetButtonDown(abilityButtonAxisName))
+                    {
+                        ButtonTriggered();
+                    }
+                    if (Input.GetButtonDown(abilityButtonAxisName))
+                    {
+                        ButtonTriggered();
+                    }
+                    break;
             }
+
             var d = Input.GetAxis("Mouse ScrollWheel");
             if (d > 0f)// scroll up
             {
