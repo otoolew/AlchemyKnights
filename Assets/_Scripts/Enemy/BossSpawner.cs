@@ -9,7 +9,7 @@ public class BossSpawner : MonoBehaviour {
     void Start()
     {
         int randomSpawnPoint = Random.Range(1, spawnPoints.Length);
-        Debug.Log("Boss Spawned "+ randomSpawnPoint +" "+ spawnPoints[randomSpawnPoint].position);
+        //Debug.Log("Boss Spawned "+ randomSpawnPoint +" "+ spawnPoints[randomSpawnPoint].position);
         GameObject bossInstance = Instantiate(bossPrefab, spawnPoints[randomSpawnPoint].position, spawnPoints[randomSpawnPoint].rotation);
     }
 }

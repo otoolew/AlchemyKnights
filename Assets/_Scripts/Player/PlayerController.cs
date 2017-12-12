@@ -41,12 +41,13 @@ public class PlayerController : MonoBehaviour
             {
                 if (!EventSystem.current.IsPointerOverGameObject())
                 {
+                    animator.SetBool("Casting", false);
                     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                     RaycastHit hit;
 
                     if (Physics.Raycast(ray, out hit, 100f, layerMask))
                     {
-                        moving = true;
+                        animator.SetBool("Moving", true);
                         navAgent.destination = hit.point;
                         navAgent.isStopped = false;
                     }
@@ -54,17 +55,14 @@ public class PlayerController : MonoBehaviour
             }
             if (navAgent.remainingDistance <= navAgent.stoppingDistance)
             {
-                if (!navAgent.hasPath || Mathf.Abs(navAgent.velocity.sqrMagnitude) < float.Epsilon)
-                    moving = false;
+                animator.SetBool("Moving", false);
             }
-            else
-            {
-                moving = true;
-            }
-            animator.SetBool("IsMoving", moving);
 
             if (Input.GetMouseButton(1))
             {
+                // MOVE TO STATE CODE
+                animator.SetBool("Moving", false);
+                animator.SetBool("Casting",true);
                 //Debug.Log("Mouse 1");
                 navAgent.SetDestination(transform.position);
                 Vector3 mousePosition = new Vector3(Input.mousePosition.x, transform.position.y, Input.mousePosition.z);
@@ -81,6 +79,11 @@ public class PlayerController : MonoBehaviour
                     launchPoint.transform.LookAt(newPoint);
                 }
             }
+            if (Input.GetMouseButtonUp(1))
+            {
+                animator.SetBool("Casting", false);
+            }
+
         }
     }
 }
