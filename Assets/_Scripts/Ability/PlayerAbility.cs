@@ -52,11 +52,11 @@ public class PlayerAbility : MonoBehaviour {
                 case AbilityType.RayCast:
                     if (Input.GetButtonDown(abilityButtonAxisName))
                     {
-                        ButtonTriggered();
+                        ButtonActivated();
                     }
-                    if (Input.GetButtonDown(abilityButtonAxisName))
+                    if (Input.GetButtonUp(abilityButtonAxisName))
                     {
-                        ButtonTriggered();
+                        ButtonDeactivated();
                     }
                     break;
             }
@@ -106,5 +106,16 @@ public class PlayerAbility : MonoBehaviour {
         darkMask.enabled = true;
         coolDownTextDisplay.enabled = true;
         currentAbility.TriggerAbility();
+    }
+    private void ButtonActivated()
+    {
+        //coolDownTextDisplay.enabled = true;
+        currentAbility.TriggerAbility();
+    }
+    private void ButtonDeactivated()
+    {
+        //coolDownTextDisplay.enabled = true;
+        GetComponent<BlastTrigger>().Deactivate();
+        currentAbility.DeactivateAbility();
     }
 }

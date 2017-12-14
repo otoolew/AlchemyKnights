@@ -11,6 +11,11 @@ public class MeleeAbility : Ability
 
     private MeleeTrigger meleeTrigger;
 
+    public override void DeactivateAbility()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override void InitializeAbility(GameObject obj)
     {
         meleeTrigger = obj.GetComponent<MeleeTrigger>();

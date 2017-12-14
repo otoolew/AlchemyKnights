@@ -9,4 +9,5 @@ public abstract class Ability : ScriptableObject {
     public AbilityType abilityType;
     public abstract void InitializeAbility(GameObject obj);
     public abstract void TriggerAbility();
+    public abstract void DeactivateAbility();
 }

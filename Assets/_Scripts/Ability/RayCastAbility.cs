@@ -11,6 +11,11 @@ public class RayCastAbility : Ability
 
     private RayCastTrigger rcShoot;
 
+    public override void DeactivateAbility()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override void InitializeAbility(GameObject obj)
     {
         rcShoot = obj.GetComponent<RayCastTrigger>();

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 
 public class PotionMasterSpeechControll : MonoBehaviour, IPointerClickHandler
 {

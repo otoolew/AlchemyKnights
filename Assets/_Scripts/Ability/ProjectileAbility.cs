@@ -7,6 +7,11 @@ public class ProjectileAbility : Ability {
     public Rigidbody projectile;
     private ProjectileTrigger launcher;
 
+    public override void DeactivateAbility()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override void InitializeAbility(GameObject obj)
     {
         launcher = obj.GetComponent<ProjectileTrigger>();
