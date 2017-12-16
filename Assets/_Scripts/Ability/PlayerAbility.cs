@@ -41,10 +41,26 @@ public class PlayerAbility : MonoBehaviour {
         if (coolDownComplete)
         {
             AbilityReady();
-            if (Input.GetButtonUp(abilityButtonAxisName))
+            switch (currentAbility.abilityType)
             {
-                ButtonTriggered();
+                case AbilityType.Projectile:
+                    if (Input.GetButtonUp(abilityButtonAxisName))
+                    {
+                        ButtonTriggered();
+                    }
+                    break;
+                case AbilityType.RayCast:
+                    if (Input.GetButtonDown(abilityButtonAxisName))
+                    {
+                        ButtonActivated();
+                    }
+                    if (Input.GetButtonUp(abilityButtonAxisName))
+                    {
+                        ButtonDeactivated();
+                    }
+                    break;
             }
+
             var d = Input.GetAxis("Mouse ScrollWheel");
             if (d > 0f)// scroll up
             {
@@ -90,5 +106,16 @@ public class PlayerAbility : MonoBehaviour {
         darkMask.enabled = true;
         coolDownTextDisplay.enabled = true;
         currentAbility.TriggerAbility();
+    }
+    private void ButtonActivated()
+    {
+        //coolDownTextDisplay.enabled = true;
+        currentAbility.TriggerAbility();
+    }
+    private void ButtonDeactivated()
+    {
+        //coolDownTextDisplay.enabled = true;
+        GetComponent<BlastTrigger>().Deactivate();
+        currentAbility.DeactivateAbility();
     }
 }

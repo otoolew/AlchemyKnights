@@ -6,10 +6,15 @@ public class RayCastAbility : Ability
 {
     public int abilityDamage = 1;
     public float abilityRange = 50f;
-    public float hitForce = 100f;
-    public Color laserColor = Color.white;
+    public float hitForce = 0f;
+    //public Color laserColor = Color.white;
 
     private RayCastTrigger rcShoot;
+
+    public override void DeactivateAbility()
+    {
+        throw new System.NotImplementedException();
+    }
 
     public override void InitializeAbility(GameObject obj)
     {
@@ -19,14 +24,15 @@ public class RayCastAbility : Ability
         rcShoot.abilityDamage = abilityDamage;
         rcShoot.abilityRange = abilityRange;
         rcShoot.hitForce = hitForce;
-        rcShoot.laserLine.material = new Material(Shader.Find("Unlit/Color"))
-        {
-            color = laserColor
-        };
+        
+        //rcShoot.laserAbility.material = new Material(Shader.Find("Unlit/Color"))
+        //{
+        //    color = laserColor
+        //};
     }
 
     public override void TriggerAbility()
     {
-        rcShoot.Fire();
+        rcShoot.InvokeRepeating("Fire",0.0f,0.3f);
     }
 }

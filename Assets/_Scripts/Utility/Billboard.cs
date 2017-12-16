@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+//using UnityEditor;
 
 public class Billboard : MonoBehaviour {
     //The purpose of this script is to have an object (normally a sprite or canvas) always face another object. 
