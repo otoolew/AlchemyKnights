@@ -51,7 +51,7 @@ public class MultiClick : MonoBehaviour {
             if (e.button == 0)
             {
                 // Mouse Up, cancel drag
-                if (e.type == EventType.mouseUp)
+                if (e.type == EventType.MouseUp)
                 {
                     bool wasPressed = lastMouseDown > 0f;
                     lastMouseDown = -1f;
@@ -59,7 +59,7 @@ public class MultiClick : MonoBehaviour {
                         return AdvancedButtonResult.Drop;
                 }
                 // Mouse Down
-                else if (e.type == EventType.mouseDown)
+                else if (e.type == EventType.MouseDown)
                 {
                     // Over the button
                     if (isHover)

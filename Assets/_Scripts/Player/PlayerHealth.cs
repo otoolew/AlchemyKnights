@@ -32,8 +32,8 @@ public class PlayerHealth : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-            TakeDamage(25);
+        //if (Input.GetKeyDown(KeyCode.D))
+        //    TakeDamage(25);
         healthSlider.value = currentHealth;
 
         if (currentHealth <= 0)
