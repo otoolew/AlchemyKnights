@@ -11,7 +11,8 @@ public class StatueSpawner : MonoBehaviour {
     public int playerProgress;
 	// Use this for initialization
 	void Start () {
-        playerProgress = FindObjectOfType<GameData>().GetPlayerLevel();
+        //playerProgress = FindObjectOfType<GameData>().GetPlayerLevel();
+        playerProgress = 0;
         //waiting for game manager to properly implement these if statements.
         if (playerProgress == 3)  //if full statue
         {

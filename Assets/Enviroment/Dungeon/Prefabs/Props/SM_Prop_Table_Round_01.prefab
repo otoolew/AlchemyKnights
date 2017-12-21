@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 467110}
   - component: {fileID: 3373534}
   - component: {fileID: 2328968}
+  - component: {fileID: 135767034933482206}
   m_Layer: 0
   m_Name: SM_Prop_Table_Round_01
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -13.789711, y: 0, z: -13.537209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +83,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167682}
   m_IsPrefabParent: 1
+--- !u!135 &135767034933482206
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.68045044
+  m_Center: {x: 0, y: 0.45683697, z: 0}

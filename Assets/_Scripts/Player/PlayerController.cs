@@ -17,8 +17,10 @@ public class PlayerController : MonoBehaviour
     private Ray ray;
     private RaycastHit rayHit = new RaycastHit();
     public Transform launchPoint;
-    private bool moving = false;
-    
+    private bool talking = false;
+
+
+
     private void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
@@ -30,11 +32,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L)){
-            FindObjectOfType<GameData>().IncrementPlayerLevel();
-            FindObjectOfType<GameData>().DebugGameData();
-        }
-   
         if (navAgent.isActiveAndEnabled)
         {
             if (Input.GetMouseButton(0))
@@ -62,7 +59,7 @@ public class PlayerController : MonoBehaviour
             {
                 // MOVE TO STATE CODE
                 animator.SetBool("Moving", false);
-                animator.SetBool("Casting",true);
+                animator.SetBool("Casting", true);
                 //Debug.Log("Mouse 1");
                 navAgent.SetDestination(transform.position);
                 Vector3 mousePosition = new Vector3(Input.mousePosition.x, transform.position.y, Input.mousePosition.z);
@@ -85,5 +82,6 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class SlowDebuff : MonoBehaviour {
+
     public float duration; // when it should expire?
     public float speedReduction;
     public float playerSpeed;
@@ -12,11 +13,14 @@ public class SlowDebuff : MonoBehaviour {
     [HideInInspector]
     public PlayerHealth playerHealth;
     [HideInInspector]
+    public PlayerController playerController;
+    [HideInInspector]
     public NavMeshAgent navAgent;
     // Use this for initialization
     void Start()
     {
         playerHealth = GetComponentInParent<PlayerHealth>();
+        playerController = GetComponentInParent<PlayerController>();
         navAgent = GetComponentInParent<NavMeshAgent>();
         playerSpeed = navAgent.speed;
     }
