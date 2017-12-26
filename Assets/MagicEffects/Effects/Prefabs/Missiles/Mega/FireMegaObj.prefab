@@ -65,11 +65,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49efb715a1395643b158a8846980bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileType: 1
+  damage: 25
   impactParticle: {fileID: 136414, guid: d59fb75f8c3c18040903bc802beec898, type: 2}
   projectileParticle: {fileID: 191840, guid: 6124dcfd1f9a5994f94c2cb2a9b5d81c, type: 2}
   muzzleParticle: {fileID: 173364, guid: 5c804cc23e83cfd4082cc1bd3691c367, type: 2}
   trailParticles: []
   impactNormal: {x: 0, y: 0, z: 0}
+  blastRadius: 2.5
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

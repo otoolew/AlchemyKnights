@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
-  - component: {fileID: 13500000}
   - component: {fileID: 5400000}
+  - component: {fileID: 13500000}
   - component: {fileID: 11484230}
   m_Layer: 0
   m_Name: ArcaneTinyObj
@@ -65,11 +65,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49efb715a1395643b158a8846980bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileType: 0
+  damage: 10
   impactParticle: {fileID: 199898, guid: 7bbe36e923d120540a9d42d5002a84f5, type: 2}
   projectileParticle: {fileID: 130552, guid: 2c2a183ad8a070b4ca24f54daad8b2da, type: 2}
-  muzzleParticle: {fileID: 0}
-  trailParticles: []
+  muzzleParticle: {fileID: 112336, guid: e50c699406fc10a4783f72816b25468f, type: 2}
+  trailParticles:
+  - {fileID: 168254, guid: 2c2a183ad8a070b4ca24f54daad8b2da, type: 2}
   impactNormal: {x: 0, y: 0, z: 0}
+  blastRadius: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

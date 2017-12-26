@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerAbility : MonoBehaviour {
-    public string abilityButtonAxisName = "Fire2";
+    public string abilityButtonAxisName = "Fire";
     public Image abilityIcon;
     public Image darkMask;
     public Text coolDownTextDisplay;
@@ -17,7 +17,7 @@ public class PlayerAbility : MonoBehaviour {
     private float nextReadyTime;
     private float coolDownTimeLeft;
     private int abilitySlot = 0;
-
+    private float timer;
     void Start()
     {
         abilityList.TrimExcess();
@@ -37,14 +37,16 @@ public class PlayerAbility : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         bool coolDownComplete = (Time.time > nextReadyTime);
         if (coolDownComplete)
         {
             AbilityReady();
+            float fireTrigger = Input.GetAxisRaw(abilityButtonAxisName);
             switch (currentAbility.abilityType)
             {
                 case AbilityType.Projectile:
-                    if (Input.GetButtonUp(abilityButtonAxisName))
+                    if (Input.GetButtonUp(abilityButtonAxisName) || fireTrigger>0)
                     {
                         ButtonTriggered();
                     }
@@ -60,7 +62,28 @@ public class PlayerAbility : MonoBehaviour {
                     }
                     break;
             }
-
+            if(timer > 0.25f)
+            {
+                //Xbox Controller
+                if (Input.GetButton("NextSlot"))
+                {
+                    timer = 0;
+                    abilitySlot++;
+                    if (abilitySlot >= abilityList.Count)
+                        abilitySlot = 0;
+                    Initialize(abilityList[abilitySlot], gameObject);
+                }
+                if (Input.GetButton("PreviousSlot"))
+                {
+                    timer = 0;
+                    abilitySlot--;
+                    if (abilitySlot < 0)
+                        abilitySlot = abilityList.Count - 1;
+                    Initialize(abilityList[abilitySlot], gameObject);
+                }
+            }
+            
+            // MOUSE SCROLL WHELL 
             var d = Input.GetAxis("Mouse ScrollWheel");
             if (d > 0f)// scroll up
             {

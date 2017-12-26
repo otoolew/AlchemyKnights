@@ -6,82 +6,94 @@ using UnityEngine.AI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
-    private Animator animator;
-    private NavMeshAgent navAgent;
+    private Animator animator;                              // Reference to the animator component.
+    private Rigidbody playerRigidbody;                      // Reference to the player's rigidbody.
+    private Vector3 movementInput;                          // The vector to store the direction of the player's movement.
+    public float movementSpeed = 0f;                        // The speed that the player will move at.
+    private Vector3 movementVelocity;
+
+    int terrainMask;                                        // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
+    float camRayLength = 100f;                              // The length of the ray from the camera into the scene.
     private PlayerAbility playerAbility;
+    private KeyboardMovement playerMovement;
     public LayerMask layerMask;
-    private Ray ray;
-    private RaycastHit rayHit = new RaycastHit();
-    public Transform launchPoint;
-    private bool talking = false;
-
-
-
-    private void Start()
+    private bool moving = false;
+    public bool controlsDisabled = false;
+    public bool controllerSupport;
+    void Awake()
     {
-        navAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
-        playerAbility = GetComponent<PlayerAbility>();
-        navAgent.enabled = true;
-        navAgent.SetDestination(transform.position);
-    }
+        // Create a layer mask for the floor layer.
+        terrainMask = LayerMask.GetMask("Terrain");
 
+        // Set up references.
+        animator = GetComponent<Animator>();
+        playerRigidbody = GetComponent<Rigidbody>();
+    }
     private void Update()
     {
-        if (navAgent.isActiveAndEnabled)
+        if (controlsDisabled)
+            return;
+
+        float hortinput = Input.GetAxisRaw("Horizontal");
+        float vertinput = Input.GetAxisRaw("Vertical");
+
+
+        movementInput = new Vector3(hortinput, 0f, vertinput);
+        movementVelocity = movementInput * movementSpeed;
+        Animating(hortinput, vertinput);
+        if (!controllerSupport)
         {
-            if (Input.GetMouseButton(0))
+            Ray rayCast = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit rayHit;
+            if (Physics.Raycast(rayCast, out rayHit, 50f, layerMask))
             {
-                if (!EventSystem.current.IsPointerOverGameObject())
-                {
-                    animator.SetBool("Casting", false);
-                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                    RaycastHit hit;
-
-                    if (Physics.Raycast(ray, out hit, 100f, layerMask))
-                    {
-                        animator.SetBool("Moving", true);
-                        navAgent.destination = hit.point;
-                        navAgent.isStopped = false;
-                    }
-                }
+                Vector3 pointToLook = rayHit.point;
+                transform.LookAt(pointToLook);
+                //Debug.DrawLine(rayCast.origin, pointToLook, Color.blue);
             }
-            if (navAgent.remainingDistance <= navAgent.stoppingDistance)
-            {
-                animator.SetBool("Moving", false);
-            }
-
-            if (Input.GetMouseButton(1))
-            {
-                // MOVE TO STATE CODE
-                animator.SetBool("Moving", false);
-                animator.SetBool("Casting", true);
-                //Debug.Log("Mouse 1");
-                navAgent.SetDestination(transform.position);
-                Vector3 mousePosition = new Vector3(Input.mousePosition.x, transform.position.y, Input.mousePosition.z);
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out rayHit, 100, layerMask))
-                {
-                    var lookPos = rayHit.point - transform.position;
-                    lookPos.y = 0;
-                    Quaternion rotation = Quaternion.LookRotation(lookPos);
-                    transform.rotation = rotation;
-                    Vector3 hitPoint = rayHit.point;
-                    Vector3 vector = new Vector3(0, 1, 0);
-                    var newPoint = hitPoint + vector;
-                    launchPoint.transform.LookAt(newPoint);
-                }
-            }
-            if (Input.GetMouseButtonUp(1))
-            {
-                animator.SetBool("Casting", false);
-            }
-
         }
+        else
+        {
+            Debug.Log("Using Xbox Controller");
+            Vector3 playerDirection = Vector3.right * Input.GetAxisRaw("RHorizontal") + Vector3.forward * -Input.GetAxisRaw("RVertical");
+            //transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+            if (playerDirection.sqrMagnitude > 0.0f)
+            {
+                transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+            }
+        }
+        //float rayLength;
 
+
+
+
+    }
+    void FixedUpdate()
+    {
+        playerRigidbody.velocity = movementVelocity;
+    }
+    public void DisableControls()
+    {
+        controlsDisabled = true;
+        playerRigidbody.isKinematic = true;
+    }
+    public void EnableControls()
+    {
+        controlsDisabled = false;
+        playerRigidbody.isKinematic = false;
+    }
+    void Animating(float h, float v)
+    {
+
+        // Create a boolean that is true if either of the input axes is non-zero.
+        bool walking = h != 0f || v != 0f;
+
+        //animator.SetFloat("Movement", movementInput.z);
+        // Tell the animator whether or not the player is walking.
+        animator.SetBool("Moving", walking);
     }
 }

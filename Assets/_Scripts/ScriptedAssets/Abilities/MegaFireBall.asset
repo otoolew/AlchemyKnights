@@ -9,10 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd07d0f16935f174ba790bdae7262d92, type: 3}
-  m_Name: ArcaneMissle
+  m_Name: MegaFireBall
   m_EditorClassIdentifier: 
-  abilityName: ArcaneMissle
-  abilitySprite: {fileID: 21300000, guid: 99262459dc04af544a8e56796adaaed6, type: 3}
+  abilityName: MegaFireBall
+  abilitySprite: {fileID: 21300000, guid: 4ab0190b1aaf69e43b7cf1d47b65920a, type: 3}
   abilityBaseCoolDown: 1
+  abilityType: 0
   projectileForce: 250
-  projectile: {fileID: 5400000, guid: 538360dad8d90fe438d0b88cabc31eaf, type: 2}
+  projectile: {fileID: 5400000, guid: ac362dee23e5abd49a1bea78db16488b, type: 2}

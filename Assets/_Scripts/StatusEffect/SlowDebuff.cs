@@ -14,15 +14,14 @@ public class SlowDebuff : MonoBehaviour {
     public PlayerHealth playerHealth;
     [HideInInspector]
     public PlayerController playerController;
-    [HideInInspector]
-    public NavMeshAgent navAgent;
+    //[HideInInspector]
+    //public NavMeshAgent navAgent;
     // Use this for initialization
     void Start()
     {
         playerHealth = GetComponentInParent<PlayerHealth>();
         playerController = GetComponentInParent<PlayerController>();
-        navAgent = GetComponentInParent<NavMeshAgent>();
-        playerSpeed = navAgent.speed;
+        playerSpeed = playerController.movementSpeed;
     }
 
     public void ApplyEffect()
@@ -31,7 +30,7 @@ public class SlowDebuff : MonoBehaviour {
         {
             isActive = true;
             particleEffect.SetActive(true);
-            navAgent.speed = speedReduction;
+            playerController.movementSpeed = speedReduction;
             Invoke("EndEffect", duration);
         }
         else
@@ -44,7 +43,7 @@ public class SlowDebuff : MonoBehaviour {
     {
         CancelInvoke();
         isActive = false;
-        navAgent.speed = playerSpeed;
+        playerController.movementSpeed = playerSpeed;
         particleEffect.SetActive(false);
     }
 }

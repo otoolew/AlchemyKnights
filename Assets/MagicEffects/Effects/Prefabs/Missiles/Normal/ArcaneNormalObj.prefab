@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileType: 0
-  damage: 50
+  damage: 10
   impactParticle: {fileID: 198366, guid: 9a964087b537346408019caeb1adf4c8, type: 2}
   projectileParticle: {fileID: 100008, guid: 7f36e4b612dfce845a0aad05b6fe7d8d, type: 2}
   muzzleParticle: {fileID: 112336, guid: e50c699406fc10a4783f72816b25468f, type: 2}
