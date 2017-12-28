@@ -10,6 +10,7 @@ public class ToxicManager : MonoBehaviour
     public Slider[] toxicSliders;
     public BlindStatusEffect BlindEffect;
     public ConfusionDebuff confusionDebuff;
+    public PlayerHealth playerHealth;
 
     public SlowDebuff slow;
     public PoisonDebuff poison;
@@ -18,15 +19,31 @@ public class ToxicManager : MonoBehaviour
     private float tickRate = 1;
     public float halfLife;
     public bool isBlind = false;
-    // Update is called once per frame
-    void Update()
+
+
+    private void Start()
     {
-        if(Input.GetKeyDown(KeyCode.B))
-            BlindEffect.ApplyBlind();
-        if (Input.GetKeyDown(KeyCode.P))
-            poison.ApplyEffect();
-
-
+        playerHealth = GetComponentInParent<PlayerHealth>();
+    }
+    // Update is called once per frame
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            TakePotion(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            TakePotion(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            TakePotion(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            TakePotion(3);
+        }
 
         timer += Time.deltaTime;
         if (timer >= tickRate)
@@ -59,18 +76,22 @@ public class ToxicManager : MonoBehaviour
         {
             case 0:
                 //Debug.Log("Took Red Potion");
+                playerHealth.HealDamage(25);
                 UpdateSlider(slot);
                 break;
             case 1:
                 //Debug.Log("Took Blue Potion");
+                BlindEffect.CureBlind();
                 UpdateSlider(slot);
                 break;
             case 2:
                 //Debug.Log("Took Green Potion");
+                poison.EndEffect();
                 UpdateSlider(slot);
                 break;
             case 3:
                 //Debug.Log("Took Yellow Potion");
+                confusionDebuff.EndEffect();
                 UpdateSlider(slot);
                 break;
             default:
